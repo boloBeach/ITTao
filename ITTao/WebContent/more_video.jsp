@@ -105,18 +105,6 @@
 			<div class="headRight">
 				<%--未登录之前是下面内容，登录后“登录”二字变为“欢迎XXX登录”，并且“注册”二字变为“个人主页” --%>
 				<span><a href="UserInfo">登录</a>&nbsp;|&nbsp;<a href="">注册</a>&nbsp;
-
-
-
-
-
-
-
-
-
-
-
-				
 			</div>
 		</div>
 		<!-- 导航 -->
@@ -159,12 +147,12 @@
 					<!-- 循环列表视频列表开始建议采用12个  -->
 					<li>
 						<div class="palyBoxList-img">
-							<a href="#" title="hadoop实战教程一"><img alt="视频一"
+							<a href="videoItem.jsp" title="hadoop实战教程一" target="_blank"><img alt="视频一"
 								src="photo.png"></a>
 						</div>
 						<div class="palyBoxList-conent">
 							<div class="palyBoxList-conent-title">
-								<a href="#" title="hadoop实战教程一">hadoop实战教程一</a>
+								<a href="videoItem.jsp" title="hadoop实战教程一" target="_blank">hadoop实战教程一</a>
 							</div>
 							<div class="palyBoxList-conent-discri">
 								说明:hadoop实战教程的介绍hadoop实战教程的介绍hadoop</div>
@@ -176,12 +164,12 @@
 					</li>
 					<li>
 						<div class="palyBoxList-img">
-							<a href="#" title="hadoop实战教程一"><img alt="视频一"
+							<a href="videoItem.jsp" title="hadoop实战教程一" target="_blank"><img alt="视频一"
 								src="photo.png"></a>
 						</div>
 						<div class="palyBoxList-conent">
 							<div class="palyBoxList-conent-title">
-								<a href="#" title="hadoop实战教程一">hadoop实战教程一</a>
+								<a href="videoItem.jsp" title="hadoop实战教程一" target="_blank">hadoop实战教程一</a>
 							</div>
 							<div class="palyBoxList-conent-discri">
 								说明:hadoop实战教程的介绍hadoop实战教程的介绍hadoop</div>
@@ -193,12 +181,12 @@
 					</li>
 					<li>
 						<div class="palyBoxList-img">
-							<a href="#" title="hadoop实战教程一"><img alt="视频一"
+							<a href="videoItem.jsp" title="hadoop实战教程一" target="_blank"><img alt="视频一"
 								src="photo.png"></a>
 						</div>
 						<div class="palyBoxList-conent">
 							<div class="palyBoxList-conent-title">
-								<a href="#" title="hadoop实战教程一">hadoop实战教程一</a>
+								<a href="videoItem.jsp" title="hadoop实战教程一" target="_blank">hadoop实战教程一</a>
 							</div>
 							<div class="palyBoxList-conent-discri">
 								说明:hadoop实战教程的介绍hadoop实战教程的介绍hadoop</div>
@@ -210,12 +198,12 @@
 					</li>
 					<li>
 						<div class="palyBoxList-img">
-							<a href="#" title="hadoop实战教程一"><img alt="视频一"
+							<a href="videoItem.jsp" title="hadoop实战教程一" target="_blank"><img alt="视频一"
 								src="photo.png"></a>
 						</div>
 						<div class="palyBoxList-conent">
 							<div class="palyBoxList-conent-title">
-								<a href="#" title="hadoop实战教程一">hadoop实战教程一</a>
+								<a href="videoItem.jsp" title="hadoop实战教程一" target="_blank">hadoop实战教程一</a>
 							</div>
 							<div class="palyBoxList-conent-discri">
 								说明:hadoop实战教程的介绍hadoop实战教程的介绍hadoop</div>
@@ -227,12 +215,12 @@
 					</li>
 					<li>
 						<div class="palyBoxList-img">
-							<a href="#" title="hadoop实战教程一"><img alt="视频一"
+							<a href="videoItem.jsp" title="hadoop实战教程一" target="_blank"><img alt="视频一"
 								src="photo.png"></a>
 						</div>
 						<div class="palyBoxList-conent">
 							<div class="palyBoxList-conent-title">
-								<a href="#" title="hadoop实战教程一">hadoop实战教程一</a>
+								<a href="videoItem.jsp" title="hadoop实战教程一" target="_blank">hadoop实战教程一</a>
 							</div>
 							<div class="palyBoxList-conent-discri">
 								说明:hadoop实战教程的介绍hadoop实战教程的介绍hadoop</div>
@@ -244,12 +232,12 @@
 					</li>
 					<li>
 						<div class="palyBoxList-img">
-							<a href="#" title="hadoop实战教程一"><img alt="视频一"
+							<a href="videoItem.jsp" title="hadoop实战教程一" target="_blank"><img alt="视频一"
 								src="photo.png"></a>
 						</div>
 						<div class="palyBoxList-conent">
 							<div class="palyBoxList-conent-title">
-								<a href="#" title="hadoop实战教程一">hadoop实战教程一</a>
+								<a href="videoItem.jsp" title="hadoop实战教程一" target="_blank">hadoop实战教程一</a>
 							</div>
 							<div class="palyBoxList-conent-discri">
 								说明:hadoop实战教程的介绍hadoop实战教程的介绍hadoop</div>
@@ -261,12 +249,12 @@
 					</li>
 					<li>
 						<div class="palyBoxList-img">
-							<a href="#" title="hadoop实战教程一"><img alt="视频一"
+							<a href="videoItem.jsp" title="hadoop实战教程一" target="_blank"><img alt="视频一"
 								src="photo.png"></a>
 						</div>
 						<div class="palyBoxList-conent">
 							<div class="palyBoxList-conent-title">
-								<a href="#" title="hadoop实战教程一">hadoop实战教程一</a>
+								<a href="videoItem.jsp" title="hadoop实战教程一">hadoop实战教程一</a>
 							</div>
 							<div class="palyBoxList-conent-discri">
 								说明:hadoop实战教程的介绍hadoop实战教程的介绍hadoop</div>
@@ -278,12 +266,12 @@
 					</li>
 					<li>
 						<div class="palyBoxList-img">
-							<a href="#" title="hadoop实战教程一"><img alt="视频一"
+							<a href="videoItem.jsp" title="hadoop实战教程一" target="_blank"><img alt="视频一"
 								src="photo.png"></a>
 						</div>
 						<div class="palyBoxList-conent">
 							<div class="palyBoxList-conent-title">
-								<a href="#" title="hadoop实战教程一">hadoop实战教程一</a>
+								<a href="videoItem.jsp" title="hadoop实战教程一" target="_blank">hadoop实战教程一</a>
 							</div>
 							<div class="palyBoxList-conent-discri">
 								说明:hadoop实战教程的介绍hadoop实战教程的介绍hadoop</div>
@@ -295,12 +283,12 @@
 					</li>
 					<li>
 						<div class="palyBoxList-img">
-							<a href="#" title="hadoop实战教程一"><img alt="视频一"
+							<a href="videoItem.jsp" title="hadoop实战教程一" target="_blank"><img alt="视频一"
 								src="photo.png"></a>
 						</div>
 						<div class="palyBoxList-conent">
 							<div class="palyBoxList-conent-title">
-								<a href="#" title="hadoop实战教程一">hadoop实战教程一</a>
+								<a href="videoItem.jsp" title="hadoop实战教程一" target="_blank">hadoop实战教程一</a>
 							</div>
 							<div class="palyBoxList-conent-discri">
 								说明:hadoop实战教程的介绍hadoop实战教程的介绍hadoop</div>

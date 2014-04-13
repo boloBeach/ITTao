@@ -274,13 +274,13 @@ img {
 					<!--左边  -->
 					<div class="latestInfoListLeftF">
 						<div class="latestlistLeft">
-							<span>◆&nbsp; <a href="video_playPage.jsp" target="_blank">
+							<span>◆&nbsp; <a href="videoItem.jsp" target="_blank">
 									大数据第一版 </a>
 							</span> <span class="price">20.00元</span>
 						</div>
 						
 						<div class="latestlistLeft">
-							<span>◆&nbsp; <a href="video_playPage.jsp" target="_blank">
+							<span>◆&nbsp; <a href="videoItem.jsp" target="_blank">
 									大数据第一版 </a>
 							</span> <span class="price">20.00元</span>
 						</div>
@@ -289,7 +289,7 @@ img {
 					<div class="verticalLine">&nbsp;</div>
 					<div class="latestInfoListLeftF">
 						<div class="latestlistLeft">
-							<span>◆&nbsp;<a href="video_playPage.jsp" target="_blank">
+							<span>◆&nbsp;<a href="videoItem.jsp" target="_blank">
 									RHadoop第一版 </a></span>
 									<span class="price">20.00元</span>
 						</div>
@@ -460,7 +460,7 @@ img {
 					<%--列表循环  14条记录--%>
 					<div class="rankinListList">
 						<span class="rankinListListSL">12</span> <span
-							class="rankinListListSR"> <a href="#" title="视频的标题">
+							class="rankinListListSR"> <a href="videoItem.jsp" target="_blank" title="视频的标题">
 								视频的标题 </a></span>
 								<span class="price">20.00元</span>
 					</div>
