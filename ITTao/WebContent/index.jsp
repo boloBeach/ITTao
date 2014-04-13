@@ -218,7 +218,7 @@ img {
 			<%--登录 注册 留言 --%>
 			<div class="headRight">
 				<%--未登录之前是下面内容，登录后“登录”二字变为“欢迎XXX登录”，并且“注册”二字变为“个人主页” --%>
-				<span><a href="#">登录</a>&nbsp;|&nbsp;<a href="#">注册</a>&nbsp;
+				<span><a href="login.jsp">登录</a>&nbsp;|&nbsp;<a href="#">注册</a>&nbsp;
 				
 			</div>
 		</div>

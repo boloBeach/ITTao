@@ -1,0 +1,10 @@
+@CHARSET "UTF-8";
+.panel, .panel-default, .panel-page{
+	width: 700px;
+	height: 500px;
+	margin-top: 20px;
+}
+.form-vertical{
+	width: 700px;
+	height: 500px;
+}

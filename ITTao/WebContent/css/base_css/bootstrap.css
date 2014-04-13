@@ -136,7 +136,7 @@ body {
   font-size: 13px;
   line-height: 18px;
   color: #000;
-  background-color: #f3f3f3;/* 由#ffffff改为f3f3f3 */
+  background-color: #f3f3f3;/* 鐢�ffffff鏀逛负f3f3f3 */
 }
 a {
   color: #0088cc;
@@ -1788,7 +1788,7 @@ table .span24 {
   opacity: 0.3;
   filter: alpha(opacity=30);
   content: "";
-  float: right;/* 添加的样式 */
+  float: right;/* 娣诲姞鐨勬牱寮�*/
 }
 .dropdown .caret {
   margin-top: 8px;
@@ -1806,7 +1806,7 @@ table .span24 {
   z-index: 1000;
   float: left;
   display: none;
-  min-width: 80px;/* 最小宽由160px设为70px */
+  min-width: 80px;/* 鏈�皬瀹界敱160px璁句负70px */
   padding: 4px 0;
   margin: 0;
   list-style: none;
@@ -3840,9 +3840,9 @@ a.thumbnail:hover {
   margin-bottom: 18px;
 }
 .accordion-group {
-  margin-bottom: 15px;/* 每个菜单之间的距离设为15px */
+  margin-bottom: 15px;/* 姣忎釜鑿滃崟涔嬮棿鐨勮窛绂昏涓�5px */
   border: 1px solid #c0c0c0;
-  -webkit-border-radius: 6px;/*应项目需要由4像素改为6像素  */
+  -webkit-border-radius: 6px;/*搴旈」鐩渶瑕佺敱4鍍忕礌鏀逛负6鍍忕礌  */
   -moz-border-radius: 6px;
   border-radius: 6px;
 }
