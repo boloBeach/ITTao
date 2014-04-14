@@ -16,6 +16,7 @@
 <script type="text/javascript" src="js/base_Js/jquery.lazyload.js"
 	charset="utf-8"></script>
 <link rel="shortcut icon" href="images/logo.png" />
+
 <!-- 
 <link rel="stylesheet" type="text/css" href="css/base_css/bootstrap.css"> -->
 <link rel="stylesheet" type="text/css" href="css/video_playPage.css">
@@ -174,7 +175,7 @@ html {
 		<!-- 导航 -->
 		<div id="nav">
 			<div id="allNav" class="allNav">
-				<span>所有分类</span>
+				<span>所有分类${content}</span>
 			</div>
 			<!-- 
 			<div class="search">
