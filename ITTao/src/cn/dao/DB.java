@@ -19,13 +19,13 @@ public class DB {
 	private static final String DB_PASSWORD = "root";
 	
 
-	private static synchronized Connection getConn()
+	private static  Connection getConn()
 			throws ClassNotFoundException, SQLException {
 		Class.forName(DB_DRIVER);
 		return DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
 	}
 
-	public static synchronized int executeUpdate(final String sql) throws SQLException,
+	public static  int executeUpdate(final String sql) throws SQLException,
 			ClassNotFoundException {
 		int result = -1;
 		Statement stmt = null;
@@ -44,7 +44,7 @@ public class DB {
 		return result;
 	}
 
-	public static synchronized List<HashMap<String, Object>> ExecuteQuery(final String sql,
+	public static  List<HashMap<String, Object>> ExecuteQuery(final String sql,
 			Object[] params) throws ClassNotFoundException, SQLException {
 		List<HashMap<String, Object>> datas = null;
 		PreparedStatement sta = null;
@@ -81,7 +81,7 @@ public class DB {
 		return datas;
 	}
 
-	private static synchronized void close(final Connection conn,
+	private static  void close(final Connection conn,
 			final Statement stmt, final ResultSet rs) {
 		try {
 			if (rs != null) {
