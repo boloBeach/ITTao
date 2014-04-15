@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ page language="java" import="java.sql.*"  %>
+<%@ page language="java" import="cn.dao.*"  %>
+<%@ page language="java" import="cn.model.*"  %>
+
 <%@ page language="java" import="java.util.*"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%
@@ -310,13 +314,18 @@ img {
 				<!-- end entertainmentInfoTop -->
 				<%--娱乐 列表 --%>
 				<div class="entertainmentContentF">
+				
+				<% List<HashMap<String,Object>> list=new VideoDao().QueryVideo(1); %>
+					<% 
+					  int i=1;
+					for(HashMap<String,Object> hashMap:list){%>
 					<div class="everyPartF">
 						<div class="everyPartImg">
-							<a href="video_playPage.jsp" target="_blank" title="亿万富豪"><img
+							<a href="video_playPage.jsp?id=<% out.print(hashMap.get("id")); %>" target="_blank" title="<%out.print(hashMap.get("vidoname")); %>"><img
 								src="daibing.jpg" /></a>
 						</div>
 						<div class="everyPartFont">
-							<a href="video_playPage.jsp" target="_blank" title="亿万富豪"> 张兵成为亿万富豪 </a>
+							<a href="video_playPage.jsp?id=<% out.print(hashMap.get("id")); %>" target="_blank" title="<%out.print(hashMap.get("vidoname")); %>"> <%out.print(hashMap.get("vidoname")); %> </a>
 						</div>
 						
 						<div class="everyPartFontPrice">
@@ -324,6 +333,10 @@ img {
 							<span class="student">10000个学员</span>
 						</div>
 					</div>
+					
+					<%} %>
+				
+					
 
 					<div class="everyPartF">
 						<div class="everyPartImg">

@@ -1,4 +1,8 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ page language="java" import="java.sql.*" contentType="text/html;charset=UTF-8" %>
+<%@ page language="java" import="cn.dao.*" contentType="text/html;charset=UTF-8" %>
+<%@ page language="java" import="cn.model.*" contentType="text/html;charset=UTF-8" %>
+
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
@@ -107,12 +111,6 @@
 			<div class="headRight">
 				<%--未登录之前是下面内容，登录后“登录”二字变为“欢迎XXX登录”，并且“注册”二字变为“个人主页” --%>
 				<span><a href="login.jsp">登录</a>&nbsp;|&nbsp;<a href="">注册</a>&nbsp;
-
-
-
-
-
-				
 			</div>
 		</div>
 		<!-- 导航 -->
@@ -151,6 +149,10 @@
 		<%--展示视频的--%>
 		<div id="playFream" class="playFreamList">
 			<div class="palyBoxList">
+			
+			
+			   
+			
 				<div class="video-title">
 					<div class="video-title-img">
 						<img alt="视频教程的名字" src="photo.png">
@@ -185,68 +187,26 @@
 					<div class="video-item-title">&nbsp;&nbsp;&nbsp;课程列表</div>
 					<div class="video-item-content">
 						<ul>
-							<li><a href="video_playPage.jsp" target="_blank" title="第一讲" class="video-item-content-a" title="第一讲">
-									<span class="video-itme-content-fiee"></span><span
+						<% List<HashMap<String,Object>> list=new VideoDao().QueryVideo(1); %>
+					<% 
+					  int i=1;
+					for(HashMap<String,Object> hashMap:list){%>
+					
+						
+							<li><a href="video_playPage.jsp?id=<% out.print(hashMap.get("id")); %>" target="_blank" title="第一讲" class="video-item-content-a" title="第一讲">
+									<span class="<% out.print(Integer.parseInt(hashMap.get("isfree").toString())==1?"video-itme-content-fiee":"video-itme-content-unfiee");%>"></span><span
 									class="item-icon"></span><span class="item-length">
 										12:51 </span>
 							</a>
 								<div class="item-body">
-									<div class="item-seq-name">课时1:</div>
+									<div class="item-seq-name">课时<% out.print(i); %>:</div>
 									<div class="item-title">
-										<a href="video_playPage.jsp" title="如何申请微信公众平台账号" target="_blank">如何申请微信公众平台账号</a>
+										<a href="video_playPage.jsp?id=<% out.print(hashMap.get("id")); %>" title="<%out.print(hashMap.get("vidoname")); %>" target="_blank"><%out.print(hashMap.get("vidoname")); %></a>
 									</div>
-								</div></li>
-								
-								<li><a href="video_playPage.jsp" target="_blank" title="第一讲" class="video-item-content-a" title="第一讲">
-									<span class="video-itme-content-fiee"></span><span
-									class="item-icon"></span><span class="item-length">
-										12:51 </span>
-							</a>
-								<div class="item-body">
-									<div class="item-seq-name">课时2:</div>
-									<div class="item-title">
-										<a href="video_playPage.jsp" title="如何申请微信公众平台账号" target="_blank">如何申请微信公众平台账号</a>
-									</div>
-								</div></li>
-								
-								
-								<li><a href="video_playPage.jsp" target="_blank" title="第一讲" class="video-item-content-a" title="第一讲">
-									<span class="video-itme-content-fiee"></span><span
-									class="item-icon"></span><span class="item-length">
-										12:51 </span>
-							</a>
-								<div class="item-body">
-									<div class="item-seq-name">课时3:</div>
-									<div class="item-title">
-										<a href="video_playPage.jsp" title="如何申请微信公众平台账号" target="_blank">如何申请微信公众平台账号</a>
-									</div>
-								</div></li>
-								
-								<li><a href="video_playPage.jsp" target="_blank" title="第一讲" class="video-item-content-a" title="第一讲">
-									<span class="video-itme-content-fiee"></span><span
-									class="item-icon"></span><span class="item-length">
-										12:51 </span>
-							</a>
-								<div class="item-body">
-									<div class="item-seq-name">课时4:</div>
-									<div class="item-title">
-										<a href="video_playPage.jsp" title="如何申请微信公众平台账号" target="_blank">如何申请微信公众平台账号</a>
-									</div>
-								</div></li>
-								
-								<li><a href="video_playPage.jsp" target="_blank" title="第一讲" class="video-item-content-a" title="第一讲">
-									<span class="video-itme-content-unfiee"></span><span
-									class="item-icon"></span><span class="item-length">
-										12:51 </span>
-							</a>
-								<div class="item-body">
-									<div class="item-seq-name">课时5:</div>
-									<div class="item-title">
-										<a href="video_playPage.jsp" title="如何申请微信公众平台账号" target="_blank">如何申请微信公众平台账号</a>
-									</div>
-								</div></li>
-								
-								
+								</div>
+								</li>
+								<%
+								i++;} %>	
 						</ul>
 					</div>
 				</div>

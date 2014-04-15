@@ -1,6 +1,11 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ page language="java" import="java.sql.*" contentType="text/html;charset=UTF-8" %>
+<%@ page language="java" import="cn.dao.*" contentType="text/html;charset=UTF-8" %>
+<%@ page language="java" import="cn.model.*" contentType="text/html;charset=UTF-8" %>
+
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
@@ -145,159 +150,26 @@
 			<div class="palyBoxList">
 				<ul class="palyBoxList-ul">
 					<!-- 循环列表视频列表开始建议采用12个  -->
-					<li>
+					<% List<HashMap<String,Object>> list=new VideoDao().QueryVideo(0); %>
+					<% for(HashMap<String,Object> hashMap:list){%>
+						<li>
 						<div class="palyBoxList-img">
-							<a href="videoItem.jsp" title="hadoop实战教程一" target="_blank"><img alt="视频一"
+							<a href="videoItem.jsp" title="<%out.print(hashMap.get("vidoname")); %>" target="_blank"><img alt="视频一"
 								src="photo.png"></a>
 						</div>
 						<div class="palyBoxList-conent">
 							<div class="palyBoxList-conent-title">
-								<a href="videoItem.jsp" title="hadoop实战教程一" target="_blank">hadoop实战教程一</a>
+								<a href="videoItem.jsp" title="<%out.print(hashMap.get("vidoname")); %>" target="_blank"><%out.print(hashMap.get("vidoname")); %></a>
 							</div>
 							<div class="palyBoxList-conent-discri">
-								说明:hadoop实战教程的介绍hadoop实战教程的介绍hadoop</div>
+								说明:<%out.print(hashMap.get("vidoname")); %></div>
 							<div class="palyBoxList-conent-price">
 								<span class="palyBoxList-conent-price-first">20.00元</span> <span
-									class="palyBoxList-conent-student">xxx 学员</span>
+									class="palyBoxList-conent-student">123 学员</span>
 							</div>
 						</div>
 					</li>
-					<li>
-						<div class="palyBoxList-img">
-							<a href="videoItem.jsp" title="hadoop实战教程一" target="_blank"><img alt="视频一"
-								src="photo.png"></a>
-						</div>
-						<div class="palyBoxList-conent">
-							<div class="palyBoxList-conent-title">
-								<a href="videoItem.jsp" title="hadoop实战教程一" target="_blank">hadoop实战教程一</a>
-							</div>
-							<div class="palyBoxList-conent-discri">
-								说明:hadoop实战教程的介绍hadoop实战教程的介绍hadoop</div>
-							<div class="palyBoxList-conent-price">
-								<span class="palyBoxList-conent-price-first">20.00元</span> <span
-									class="palyBoxList-conent-student">xxx 学员</span>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div class="palyBoxList-img">
-							<a href="videoItem.jsp" title="hadoop实战教程一" target="_blank"><img alt="视频一"
-								src="photo.png"></a>
-						</div>
-						<div class="palyBoxList-conent">
-							<div class="palyBoxList-conent-title">
-								<a href="videoItem.jsp" title="hadoop实战教程一" target="_blank">hadoop实战教程一</a>
-							</div>
-							<div class="palyBoxList-conent-discri">
-								说明:hadoop实战教程的介绍hadoop实战教程的介绍hadoop</div>
-							<div class="palyBoxList-conent-price">
-								<span class="palyBoxList-conent-price-first">20.00元</span> <span
-									class="palyBoxList-conent-student">xxx 学员</span>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div class="palyBoxList-img">
-							<a href="videoItem.jsp" title="hadoop实战教程一" target="_blank"><img alt="视频一"
-								src="photo.png"></a>
-						</div>
-						<div class="palyBoxList-conent">
-							<div class="palyBoxList-conent-title">
-								<a href="videoItem.jsp" title="hadoop实战教程一" target="_blank">hadoop实战教程一</a>
-							</div>
-							<div class="palyBoxList-conent-discri">
-								说明:hadoop实战教程的介绍hadoop实战教程的介绍hadoop</div>
-							<div class="palyBoxList-conent-price">
-								<span class="palyBoxList-conent-price-first">20.00元</span> <span
-									class="palyBoxList-conent-student">xxx 学员</span>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div class="palyBoxList-img">
-							<a href="videoItem.jsp" title="hadoop实战教程一" target="_blank"><img alt="视频一"
-								src="photo.png"></a>
-						</div>
-						<div class="palyBoxList-conent">
-							<div class="palyBoxList-conent-title">
-								<a href="videoItem.jsp" title="hadoop实战教程一" target="_blank">hadoop实战教程一</a>
-							</div>
-							<div class="palyBoxList-conent-discri">
-								说明:hadoop实战教程的介绍hadoop实战教程的介绍hadoop</div>
-							<div class="palyBoxList-conent-price">
-								<span class="palyBoxList-conent-price-first">20.00元</span> <span
-									class="palyBoxList-conent-student">xxx 学员</span>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div class="palyBoxList-img">
-							<a href="videoItem.jsp" title="hadoop实战教程一" target="_blank"><img alt="视频一"
-								src="photo.png"></a>
-						</div>
-						<div class="palyBoxList-conent">
-							<div class="palyBoxList-conent-title">
-								<a href="videoItem.jsp" title="hadoop实战教程一" target="_blank">hadoop实战教程一</a>
-							</div>
-							<div class="palyBoxList-conent-discri">
-								说明:hadoop实战教程的介绍hadoop实战教程的介绍hadoop</div>
-							<div class="palyBoxList-conent-price">
-								<span class="palyBoxList-conent-price-first">20.00元</span> <span
-									class="palyBoxList-conent-student">xxx 学员</span>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div class="palyBoxList-img">
-							<a href="videoItem.jsp" title="hadoop实战教程一" target="_blank"><img alt="视频一"
-								src="photo.png"></a>
-						</div>
-						<div class="palyBoxList-conent">
-							<div class="palyBoxList-conent-title">
-								<a href="videoItem.jsp" title="hadoop实战教程一">hadoop实战教程一</a>
-							</div>
-							<div class="palyBoxList-conent-discri">
-								说明:hadoop实战教程的介绍hadoop实战教程的介绍hadoop</div>
-							<div class="palyBoxList-conent-price">
-								<span class="palyBoxList-conent-price-first">20.00元</span> <span
-									class="palyBoxList-conent-student">xxx 学员</span>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div class="palyBoxList-img">
-							<a href="videoItem.jsp" title="hadoop实战教程一" target="_blank"><img alt="视频一"
-								src="photo.png"></a>
-						</div>
-						<div class="palyBoxList-conent">
-							<div class="palyBoxList-conent-title">
-								<a href="videoItem.jsp" title="hadoop实战教程一" target="_blank">hadoop实战教程一</a>
-							</div>
-							<div class="palyBoxList-conent-discri">
-								说明:hadoop实战教程的介绍hadoop实战教程的介绍hadoop</div>
-							<div class="palyBoxList-conent-price">
-								<span class="palyBoxList-conent-price-first">20.00元</span> <span
-									class="palyBoxList-conent-student">xxx 学员</span>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div class="palyBoxList-img">
-							<a href="videoItem.jsp" title="hadoop实战教程一" target="_blank"><img alt="视频一"
-								src="photo.png"></a>
-						</div>
-						<div class="palyBoxList-conent">
-							<div class="palyBoxList-conent-title">
-								<a href="videoItem.jsp" title="hadoop实战教程一" target="_blank">hadoop实战教程一</a>
-							</div>
-							<div class="palyBoxList-conent-discri">
-								说明:hadoop实战教程的介绍hadoop实战教程的介绍hadoop</div>
-							<div class="palyBoxList-conent-price">
-								<span class="palyBoxList-conent-price-first">20.00元</span> <span
-									class="palyBoxList-conent-student">xxx 学员</span>
-							</div>
-						</div>
-					</li>
+					<% } %>
 					<!-- 循环列表视频列表结束建议采用12个  -->
 				</ul>
 				<!-- 分页 -->

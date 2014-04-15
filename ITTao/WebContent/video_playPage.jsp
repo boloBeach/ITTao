@@ -1,4 +1,8 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ page language="java" import="java.sql.*" contentType="text/html;charset=UTF-8" %>
+<%@ page language="java" import="cn.dao.*" contentType="text/html;charset=UTF-8" %>
+<%@ page language="java" import="cn.model.*" contentType="text/html;charset=UTF-8" %>
+
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
@@ -139,7 +143,12 @@
 		<%--视屏播放地方--%>
 		<div id="playFream" class="playFream">
 			<div id="palyBox">
-				<div class="playWindow" id="playWindow"></div>
+				<div class="playWindow" id="playWindow">
+				<% String id= request.getParameter("id");
+				List<HashMap<String,Object>> list=new VideoDao().query(id);
+				%>
+				  <embed id="videopalyer" src="<%out.print(list.get(0).get("videourl")); %>" allowfullscreen="true" flashvars="controlbar=over&image=./photo.png&file=./Breathless.mp4" width="660" height="530"/>
+				</div>
 				<%--end playWindow --%>
 				<div class="playRightNav">
 					<div class="playRightNavUpTitle">相关视频</div>
