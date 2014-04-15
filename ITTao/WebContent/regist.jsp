@@ -16,7 +16,6 @@
 <script type="text/javascript" src="js/base_Js/jquery.lazyload.js"
 	charset="utf-8"></script>
 <link rel="shortcut icon" href="images/logo.png" />
-
 <!-- 
 <link rel="stylesheet" type="text/css" href="css/base_css/bootstrap.css"> -->
 <link rel="stylesheet" type="text/css" href="css/video_playPage.css">
@@ -175,7 +174,7 @@ html {
 		<!-- 导航 -->
 		<div id="nav">
 			<div id="allNav" class="allNav">
-				<span>所有分类${content}</span>
+				<span>所有分类</span>
 			</div>
 			<!-- 
 			<div class="search">
@@ -202,7 +201,7 @@ html {
 		<%--播放的位置与内容的标题 --%>
 		<div class="palyTitleF">
 			<div class="palyTitle">
-				<span> 登录 </span>&nbsp;
+				<span> 注册 </span>&nbsp;
 			</div>
 		</div>
 		<%--展示视频的--%>
@@ -232,22 +231,28 @@ html {
 								<div class="help-block" style="display: none;"></div>
 							</div>
 						</div>
+						
+						<div class="form-group">
+							<label class="control-label" for="login_password">确认密码</label>
+							<div class="controls">
+								<input class="form-control" id="login_password" type="password"
+									name="checkPassword"  placeholder="请再次输入密码" data-widget-cid="widget-2"
+									data-explain="" required>
+								<div class="help-block" style="display: none;"></div>
+							</div>
+						</div>
 
 						<div class="form-group">
 							<div class="controls">
-								<span class="checkbox mtm pull-right"> <label> <input
-										type="checkbox" name="_remember_me" checked="checked">
-										记住密码
-								</label>
 								</span>
-								<input type="submit" class="btn btn-fat btn-primary btn-large" value="登录">
+								<input type="submit" class="btn btn-fat btn-primary btn-large" value="注册">
 							</div>
 						</div>
 					</form>
 
 					<div class="ptl">
 						<!-- <a href="#">找回密码</a> <span class="text-muted mhs">|</span> --> <span
-							class="text-muted">还没有注册帐号？</span> <a href="regist.jsp">立即注册</a>
+							class="text-muted">还没有注册帐号？</span> <a href="#">立即注册</a>
 					</div>
 				</div>
 			</div>
