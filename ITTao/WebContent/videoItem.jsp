@@ -195,7 +195,7 @@
 						
 							<li><a href="video_playPage.jsp?id=<% out.print(hashMap.get("id")); %>" target="_blank" title="第一讲" class="video-item-content-a" title="第一讲">
 									<span class="<% out.print(Integer.parseInt(hashMap.get("isfree").toString())==1?"video-itme-content-fiee":"video-itme-content-unfiee");%>"></span><span
-									class="item-icon"></span><span class="item-length">
+					  				class="item-icon"></span><span class="item-length">
 										12:51 </span>
 							</a>
 								<div class="item-body">
