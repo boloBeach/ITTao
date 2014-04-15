@@ -67,7 +67,6 @@
 .video-item {
 	width: 912px;
 	margin-top: 20px;
-	border: 1px solid #DDDDDD;
 }
 
 .video-item-title {
@@ -85,6 +84,7 @@
 .video-item-content ul {
 	list-style: none;
 	border: 1px solid #DDDDDD;
+	float: left;
 }
 
 .video-item-content li {
