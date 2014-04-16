@@ -277,26 +277,28 @@ img {
 				<div class="latestInfoListF">
 					<!--左边  -->
 					<div class="latestInfoListLeftF">
+					<% List<HashMap<String,Object>> listit=new VideoDao().QueryVideo("0",0,4); %>
+					<% for(HashMap<String,Object> hashMap:listit){%>
 						<div class="latestlistLeft">
-							<span>◆&nbsp; <a href="videoItem.jsp" target="_blank">
-									大数据第一版 </a>
+							<span>◆&nbsp; <a href="videoItem.jsp?id=<%out.print(hashMap.get("id")); %>" target="_blank">
+									<%out.print(hashMap.get("vidoname")); %> </a>
 							</span> <span class="price">20.00元</span>
 						</div>
+						<%} %>
 						
-						<div class="latestlistLeft">
-							<span>◆&nbsp; <a href="videoItem.jsp" target="_blank">
-									大数据第一版 </a>
-							</span> <span class="price">20.00元</span>
-						</div>
 					</div>
 					<!-- end latestInfoListLeftF -->
 					<div class="verticalLine">&nbsp;</div>
 					<div class="latestInfoListLeftF">
+					<% List<HashMap<String,Object>> listit2=new VideoDao().QueryVideo("0",4,4); %>
+					<% for(HashMap<String,Object> hashMap:listit2){%>
+					
 						<div class="latestlistLeft">
-							<span>◆&nbsp;<a href="videoItem.jsp" target="_blank">
-									RHadoop第一版 </a></span>
+							<span>◆&nbsp;<a href="videoItem.jsp?id=<%out.print(hashMap.get("id")); %>" target="_blank">
+									<%out.print(hashMap.get("vidoname")); %></a></span>
 									<span class="price">20.00元</span>
 						</div>
+							<%} %>
 					</div>
 					<!-- end latestInfoListLeftF -->
 				</div>
@@ -315,7 +317,7 @@ img {
 				<%--娱乐 列表 --%>
 				<div class="entertainmentContentF">
 				
-				<% List<HashMap<String,Object>> list=new VideoDao().QueryVideo("1"); %>
+				<% List<HashMap<String,Object>> list=new VideoDao().QueryVideo("1",12); %>
 					<% 
 					int i=1;
 					for(HashMap<String,Object> hashMap:list){%>
@@ -333,13 +335,7 @@ img {
 							<span class="student">10000个学员</span>
 						</div>
 					</div>
-					
 					<%} %>
-				
-					
-
-				
-					
 					<a href="more_video.jsp" target="_blank" title="查看更多"><button type="button" style="margin-top: 20px;width: 100%;text-align: center;height: 40px;font-size: 16px;" class="btn btn-default btn-lg btn-block">查看更多</button></a>
 				</div>
 			</div>
@@ -347,6 +343,7 @@ img {
 
 			<%-- =========================排行榜 rankinList============================--%>
 
+               
 			<div class="rankinListFram">
 				<div class="rankinListInfoTop">
 					<img alt="" src="images/front_img/video_classTitleLine.png">

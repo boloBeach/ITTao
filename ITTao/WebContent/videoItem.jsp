@@ -97,7 +97,7 @@
 		<a title="返回底部" class="bottom" href="#gobottom"></a>
 	</div>
 
-
+<%String id=request.getParameter("id"); %>
 	<!---- -返回顶部和底部--结束- -->
 	<!-- 要显示的全部内容-->
 	<div class="fream" id="fream">
@@ -152,15 +152,17 @@
 			
 			
 			   
+			<% List<HashMap<String,Object>> item= new VideoDao().QueryById(id) ;
 			
+			%>
 				<div class="video-title">
 					<div class="video-title-img">
-						<img alt="视频教程的名字" src="photo.png">
+						<img alt="<%out.print(item.get(0).get("vidoname")); %>" src="<%out.print(item.get(0).get("image")); %>">
 					</div>
 					<div class="video-title-discri">
-						<div class="video-title-discri-title">hadoop第一版</div>
+						<div class="video-title-discri-title"><%out.print(item.get(0).get("vidoname")); %></div>
 
-						<div class="video-title-discri-discri">hadoop第一版的描述</div>
+						<div class="video-title-discri-discri"><%out.print(item.get(0).get("des")); %></div>
 
 						<div class="video-title-price">
 							价格:<span>20.00元</span>
@@ -188,7 +190,7 @@
 					<div class="video-item-content">
 						<ul>
 						<% 
-						String id=request.getParameter("id");
+						
 						List<HashMap<String,Object>> list=new VideoDao().QueryVideo(id); %>
 					<% 
 					  int i=1;
