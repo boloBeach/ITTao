@@ -315,14 +315,14 @@ img {
 				<%--娱乐 列表 --%>
 				<div class="entertainmentContentF">
 				
-				<% List<HashMap<String,Object>> list=new VideoDao().QueryVideo(1); %>
+				<% List<HashMap<String,Object>> list=new VideoDao().QueryVideo("1"); %>
 					<% 
-					  int i=1;
+					int i=1;
 					for(HashMap<String,Object> hashMap:list){%>
 					<div class="everyPartF">
 						<div class="everyPartImg">
 							<a href="video_playPage.jsp?id=<% out.print(hashMap.get("id")); %>" target="_blank" title="<%out.print(hashMap.get("vidoname")); %>"><img
-								src="daibing.jpg" /></a>
+								src="<% out.print(hashMap.get("image")); %>" /></a>
 						</div>
 						<div class="everyPartFont">
 							<a href="video_playPage.jsp?id=<% out.print(hashMap.get("id")); %>" target="_blank" title="<%out.print(hashMap.get("vidoname")); %>"> <%out.print(hashMap.get("vidoname")); %> </a>
@@ -338,121 +338,7 @@ img {
 				
 					
 
-					<div class="everyPartF">
-						<div class="everyPartImg">
-							<a href="video_playPage.jsp" target="_blank" title="亿万富豪"><img
-								src="daibing.jpg" /></a>
-						</div>
-						<div class="everyPartFont">
-							<a href="video_playPage.jsp" target="_blank" title="亿万富豪"> 张兵成为亿万富豪 </a>
-						</div>
-						
-						<div class="everyPartFontPrice">
-							<span class="everyPartFontPrice-price">20.00元</span>   
-							<span class="student">10000个学员</span>
-						</div>
-					</div>
-					<div class="everyPartF">
-						<div class="everyPartImg">
-							<a href="video_playPage.jsp" target="_blank" title="亿万富豪"><img
-								src="daibing.jpg" /></a>
-						</div>
-						<div class="everyPartFont">
-							<a href="video_playPage.jsp" target="_blank" title="亿万富豪"> 张兵成为亿万富豪 </a>
-						</div>
-						
-						<div class="everyPartFontPrice">
-							<span class="everyPartFontPrice-price">20.00元</span>   
-							<span class="student">10000个学员</span>
-						</div>
-					</div>
-					<div class="everyPartF">
-						<div class="everyPartImg">
-							<a href="video_playPage.jsp" target="_blank" title="亿万富豪"><img
-								src="daibing.jpg" /></a>
-						</div>
-						<div class="everyPartFont">
-							<a href="video_playPage.jsp" target="_blank" title="亿万富豪"> 张兵成为亿万富豪 </a>
-						</div>
-						
-						<div class="everyPartFontPrice">
-							<span class="everyPartFontPrice-price">20.00元</span>   
-							<span class="student">10000个学员</span>
-						</div>
-					</div>
-					<div class="everyPartF">
-						<div class="everyPartImg">
-							<a href="video_playPage.jsp" target="_blank" title="亿万富豪"><img
-								src="daibing.jpg" /></a>
-						</div>
-						<div class="everyPartFont">
-							<a href="video_playPage.jsp" target="_blank" title="亿万富豪"> 张兵成为亿万富豪 </a>
-						</div>
-						
-						<div class="everyPartFontPrice">
-							<span class="everyPartFontPrice-price">20.00元</span>   
-							<span class="student">10000个学员</span>
-						</div>
-					</div>
-					<div class="everyPartF">
-						<div class="everyPartImg">
-							<a href="video_playPage.jsp" target="_blank" title="亿万富豪"><img
-								src="daibing.jpg" /></a>
-						</div>
-						<div class="everyPartFont">
-							<a href="video_playPage.jsp" target="_blank" title="亿万富豪"> 张兵成为亿万富豪 </a>
-						</div>
-						
-						<div class="everyPartFontPrice">
-							<span class="everyPartFontPrice-price">20.00元</span>   
-							<span class="student">10000个学员</span>
-						</div>
-					</div>
-					
-					<div class="everyPartF">
-						<div class="everyPartImg">
-							<a href="video_playPage.jsp" target="_blank" title="亿万富豪"><img
-								src="daibing.jpg" /></a>
-						</div>
-						<div class="everyPartFont">
-							<a href="video_playPage.jsp" target="_blank" title="亿万富豪"> 张兵成为亿万富豪 </a>
-						</div>
-						
-						<div class="everyPartFontPrice">
-							<span class="everyPartFontPrice-price">20.00元</span>   
-							<span class="student">10000个学员</span>
-						</div>
-					</div>
-					
-					<div class="everyPartF">
-						<div class="everyPartImg">
-							<a href="video_playPage.jsp" target="_blank" title="亿万富豪"><img
-								src="daibing.jpg" /></a>
-						</div>
-						<div class="everyPartFont">
-							<a href="video_playPage.jsp" target="_blank" title="亿万富豪"> 张兵成为亿万富豪 </a>
-						</div>
-						
-						<div class="everyPartFontPrice">
-							<span class="everyPartFontPrice-price">20.00元</span>   
-							<span class="student">10000个学员</span>
-						</div>
-					</div>
-					
-					<div class="everyPartF">
-						<div class="everyPartImg">
-							<a href="video_playPage.jsp" target="_blank" title="亿万富豪"><img
-								src="daibing.jpg" /></a>
-						</div>
-						<div class="everyPartFont">
-							<a href="video_playPage.jsp" target="_blank" title="亿万富豪"> 张兵成为亿万富豪 </a>
-						</div>
-						
-						<div class="everyPartFontPrice">
-							<span class="everyPartFontPrice-price">20.00元</span>   
-							<span class="student">10000个学员</span>
-						</div>
-					</div>
+				
 					
 					<a href="more_video.jsp" target="_blank" title="查看更多"><button type="button" style="margin-top: 20px;width: 100%;text-align: center;height: 40px;font-size: 16px;" class="btn btn-default btn-lg btn-block">查看更多</button></a>
 				</div>

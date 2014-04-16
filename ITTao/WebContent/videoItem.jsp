@@ -187,7 +187,9 @@
 					<div class="video-item-title">&nbsp;&nbsp;&nbsp;课程列表</div>
 					<div class="video-item-content">
 						<ul>
-						<% List<HashMap<String,Object>> list=new VideoDao().QueryVideo(1); %>
+						<% 
+						String id=request.getParameter("id");
+						List<HashMap<String,Object>> list=new VideoDao().QueryVideo(id); %>
 					<% 
 					  int i=1;
 					for(HashMap<String,Object> hashMap:list){%>

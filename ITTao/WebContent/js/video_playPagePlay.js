@@ -36,7 +36,7 @@ $(document).ready(function(){
  * 加载播放器
  */
 $(document).ready(function(){
-	$('<embed id="videopalyer" src="http://cloud.video.taobao.com/play/u/50482424/e/1/t/1/p/1/11488647.swf" allowfullscreen="true" flashvars="controlbar=over&image=./photo.png&file=./Breathless.mp4" width="660" height="530"/>').appendTo("#playWindow");
+	//$('<embed id="videopalyer" src="http://cloud.video.taobao.com/play/u/50482424/e/1/t/1/p/1/11488647.swf" allowfullscreen="true" flashvars="controlbar=over&image=./photo.png&file=./Breathless.mp4" width="660" height="530"/>').appendTo("#playWindow");
 	//var url='<embed src="./Breathless.mp4" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" wmode="opaque" width="660" height="530" flashvars="playerId=76071766572662785&amp;apiDomain=api.video.smgbb.cn&amp;omsid=&amp;xmlid=vxml/2013-04-02/2684012">';
 	//$(url).appendTo("#playWindow");
 	// ajax加载

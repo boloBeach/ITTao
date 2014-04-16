@@ -9,6 +9,7 @@ public class Video {
 	private int clickCount;
 	private int parentId;
 	
+	
 	public int getId() {
 		return id;
 	}

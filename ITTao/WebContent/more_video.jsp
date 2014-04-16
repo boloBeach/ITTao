@@ -150,21 +150,21 @@
 			<div class="palyBoxList">
 				<ul class="palyBoxList-ul">
 					<!-- 循环列表视频列表开始建议采用12个  -->
-					<% List<HashMap<String,Object>> list=new VideoDao().QueryVideo(0); %>
+					<% List<HashMap<String,Object>> list=new VideoDao().QueryVideo("0"); %>
 					<% for(HashMap<String,Object> hashMap:list){%>
 						<li>
 						<div class="palyBoxList-img">
-							<a href="videoItem.jsp" title="<%out.print(hashMap.get("vidoname")); %>" target="_blank"><img alt="视频一"
-								src="photo.png"></a>
+							<a href="videoItem.jsp?id=<%out.print(hashMap.get("id")); %>" title="<%out.print(hashMap.get("vidoname")); %>" target="_blank"><img alt="视频一"
+								src="<% out.print(hashMap.get("image")); %>"></a>
 						</div>
 						<div class="palyBoxList-conent">
 							<div class="palyBoxList-conent-title">
-								<a href="videoItem.jsp" title="<%out.print(hashMap.get("vidoname")); %>" target="_blank"><%out.print(hashMap.get("vidoname")); %></a>
+								<a href="videoItem.jsp?id=<%out.print(hashMap.get("id")); %>" title="<%out.print(hashMap.get("vidoname")); %>" target="_blank"><%out.print(hashMap.get("vidoname")); %></a>
 							</div>
 							<div class="palyBoxList-conent-discri">
 								说明:<%out.print(hashMap.get("vidoname")); %></div>
 							<div class="palyBoxList-conent-price">
-								<span class="palyBoxList-conent-price-first">20.00元</span> <span
+								<span class="palyBoxList-conent-price-first">00.10元</span> <span
 									class="palyBoxList-conent-student">123 学员</span>
 							</div>
 						</div>
