@@ -165,11 +165,11 @@
 						<div class="video-title-discri-discri"><%out.print(item.get(0).get("des")); %></div>
 
 						<div class="video-title-price">
-							价格:<span>20.00元</span>
+							价格:<span><%out.print(item.get(0).get("money")); %>元</span>
 						</div>
 
 						<div class="video-title-price">
-							学员数:<span>20</span>
+							学员数:<span><%out.print(item.get(0).get("clickcount")); %></span>
 						</div>
 						<div class="video-title-price">
 							<button class="btn btn-success"

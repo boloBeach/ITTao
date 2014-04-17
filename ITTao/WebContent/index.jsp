@@ -282,7 +282,7 @@ img {
 						<div class="latestlistLeft">
 							<span>◆&nbsp; <a href="videoItem.jsp?id=<%out.print(hashMap.get("id")); %>" target="_blank">
 									<%out.print(hashMap.get("vidoname")); %> </a>
-							</span> <span class="price">20.00元</span>
+							</span> <span class="price"><%out.print(hashMap.get("money")); %>元</span>
 						</div>
 						<%} %>
 						
@@ -296,7 +296,7 @@ img {
 						<div class="latestlistLeft">
 							<span>◆&nbsp;<a href="videoItem.jsp?id=<%out.print(hashMap.get("id")); %>" target="_blank">
 									<%out.print(hashMap.get("vidoname")); %></a></span>
-									<span class="price">20.00元</span>
+									<span class="price"><%out.print(hashMap.get("money")); %>元</span>
 						</div>
 							<%} %>
 					</div>
@@ -331,8 +331,8 @@ img {
 						</div>
 						
 						<div class="everyPartFontPrice">
-							<span class="everyPartFontPrice-price">20.00元</span>   
-							<span class="student">10000个学员</span>
+							<span class="everyPartFontPrice-price"><% out.print(hashMap.get("money")); %>元</span>   
+							<span class="student"><% out.print(hashMap.get("clickcount")); %>个学员</span>
 						</div>
 					</div>
 					<%} %>
