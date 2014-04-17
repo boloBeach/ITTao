@@ -17,15 +17,14 @@ public class DB {
 	private static final String DB_URL = "jdbc:mysql://192.168.1.230:3306/videodb?useUnicode=true&characterEncoding=UTF-8";
 	private static final String DB_USER = "root";
 	private static final String DB_PASSWORD = "root";
-	
 
-	private static  Connection getConn()
-			throws ClassNotFoundException, SQLException {
+	private static Connection getConn() throws ClassNotFoundException,
+			SQLException {
 		Class.forName(DB_DRIVER);
 		return DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
 	}
 
-	public static  int executeUpdate(final String sql) throws SQLException,
+	public static int executeUpdate(final String sql) throws SQLException,
 			ClassNotFoundException {
 		int result = -1;
 		Statement stmt = null;
@@ -44,7 +43,34 @@ public class DB {
 		return result;
 	}
 
-	public static  List<HashMap<String, Object>> ExecuteQuery(final String sql,
+	public static int executeUpdate( String sql,Object[] params) throws SQLException,
+			ClassNotFoundException {
+		int result = -1;
+		PreparedStatement stmt = null;
+		Connection conn = null;
+		try {
+			conn = getConn();
+			stmt = conn.prepareStatement(sql);
+			System.out.println(sql+"|"+params.length);
+			if (params != null) {
+				int i = 0;
+				for (Object obj : params) {
+					stmt.setObject(i + 1, obj);
+					i++;
+				}
+			}
+			result = stmt.executeUpdate();
+		} catch (ClassNotFoundException e) {
+			throw e;
+		} catch (SQLException e) {
+			throw e;
+		} finally {
+			close(conn, stmt, null);
+		}
+		return result;
+	}
+
+	public static List<HashMap<String, Object>> ExecuteQuery(final String sql,
 			Object[] params) throws ClassNotFoundException, SQLException {
 		List<HashMap<String, Object>> datas = null;
 		PreparedStatement sta = null;
@@ -56,6 +82,7 @@ public class DB {
 				int i = 0;
 				for (Object obj : params) {
 					sta.setObject(i + 1, obj);
+					i++;
 				}
 			}
 			rs = sta.executeQuery();
@@ -81,8 +108,8 @@ public class DB {
 		return datas;
 	}
 
-	private static  void close(final Connection conn,
-			final Statement stmt, final ResultSet rs) {
+	private static void close(final Connection conn, final Statement stmt,
+			final ResultSet rs) {
 		try {
 			if (rs != null) {
 				rs.close();

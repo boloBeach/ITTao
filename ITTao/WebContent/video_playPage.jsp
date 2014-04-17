@@ -5,6 +5,33 @@
 
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
+
+<% HttpSession httpSession =request.getSession();
+String id= request.getParameter("id");
+   if(httpSession==null){
+	   response.sendRedirect("index.jsp");
+   }
+   
+   String username=httpSession.getAttribute("username")==null?null:httpSession.getAttribute("username").toString();
+   String password=httpSession.getAttribute("password")==null?null:httpSession.getAttribute("password").toString();
+ if(
+		 username!=null&&username.length()>0&&
+		 password!=null&&password.length()>0&&
+		 id!=null&&id.length()>0){
+	 
+	 if(!(new VideoDao().isView(id,username,password)))
+	 {
+		 response.sendRedirect("index.jsp");
+	 }
+	 
+	 
+ }else{
+	  response.sendRedirect("index.jsp");
+ } 
+   
+ 
+%>
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
@@ -144,7 +171,7 @@
 		<div id="playFream" class="playFream">
 			<div id="palyBox">
 				<div class="playWindow" id="playWindow">
-				<% String id= request.getParameter("id");
+				<% 
 				List<HashMap<String,Object>> list=new VideoDao().query(id);
 				%>
 				  <embed id="videopalyer" src="<%out.print(list.get(0).get("videourl")); %>" allowfullscreen="true" flashvars="controlbar=over&image=./photo.png&file=./Breathless.mp4" width="660" height="530"/>

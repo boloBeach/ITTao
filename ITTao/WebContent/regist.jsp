@@ -209,15 +209,14 @@ html {
 			<div class="palyBoxList">
 				<div class="panel panel-default panel-page">
 					<form id="login-form" class="form-vertical" method="post"
-						action="#" novalidate="novalidate" data-widget-cid="widget-0">
-
+						action="/ITTao/register" novalidate="novalidate" data-widget-cid="widget-0">
 						<div class="alert alert-danger">帐号或密码不正确</div>
 
 						<div class="form-group">
 							<label class="control-label" for="login_username">帐号</label>
 							<div class="controls">
 								<input class="form-control" id="login_username" type="text"
-									name="_username" value="11" 
+									name="username" value="" 
 									data-widget-cid="widget-1" pattern="^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$" title="邮箱正确格式：xxx@xxx.xxx" placeholder="请输入Email地址" data-explain="请输入Email地址 / 用户昵称" required>
 								<div class="help-block">请输入Email地址 </div>
 							</div>
@@ -226,7 +225,7 @@ html {
 							<label class="control-label" for="login_password">密码</label>
 							<div class="controls">
 								<input class="form-control" id="login_password" type="password"
-									name="_password"  placeholder="请输入密码" data-widget-cid="widget-2"
+									name="password"  placeholder="请输入密码" data-widget-cid="widget-2"
 									data-explain="" required>
 								<div class="help-block" style="display: none;"></div>
 							</div>
@@ -236,7 +235,7 @@ html {
 							<label class="control-label" for="login_password">确认密码</label>
 							<div class="controls">
 								<input class="form-control" id="login_password" type="password"
-									name="checkPassword"  placeholder="请再次输入密码" data-widget-cid="widget-2"
+									name="cpassword"  placeholder="请再次输入密码" data-widget-cid="widget-2"
 									data-explain="" required>
 								<div class="help-block" style="display: none;"></div>
 							</div>
