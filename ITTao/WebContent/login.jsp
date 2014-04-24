@@ -24,6 +24,34 @@
 
 <script language="javascript" type="text/javascript"
 	src="js/video_playPage.js"></script>
+<script type="text/javascript" charset="utf-8">
+	$(document).ready(function(){
+		var email = $("#login_username").val();
+		var passwrod = $("#login_password").val();
+		var submit = $("#submit");
+		var alertDanger = $("#alert alert-danger");
+		var reg = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/;
+		submit.click(function(){
+			if(email==null || email==""){
+				alertDanger.html("对不起，您没有输入email邮箱");
+				$("#login_username").focus();
+				return false;
+			}
+			
+			if(password =="" || password ==null){
+				alertDanger.html("对不起，您没有输入密码");
+				$("#login_password").focus();
+				return false;
+			}
+			if(reg.test(email)){
+				alertDanger.html("对不起，您输入的不是邮箱地址");
+				$("#login_username").focus();
+				return false;
+			}
+		});
+		
+	});
+</script>
 <!-- 播放区域的引入 -->
 
 <style type="text/css">
@@ -212,7 +240,7 @@ html {
 					<form id="login-form" class="form-vertical" method="post"
 						action="/ITTao/login" novalidate="novalidate" data-widget-cid="widget-0">
 
-						<div class="alert alert-danger">帐号或密码不正确</div>
+						<div class="alert alert-danger" id="alert alert-danger"></div>
 
 						<div class="form-group">
 							<label class="control-label" for="login_username">帐号</label>
@@ -240,7 +268,7 @@ html {
 										记住密码
 								</label>
 								</span>
-								<input type="submit" class="btn btn-fat btn-primary btn-large" value="登录">
+								<input type="submit" class="btn btn-fat btn-primary btn-large" id="submit" value="登录">
 							</div>
 						</div>
 					</form>
