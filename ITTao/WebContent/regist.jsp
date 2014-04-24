@@ -24,7 +24,46 @@
 <script language="javascript" type="text/javascript"
 	src="js/video_playPage.js"></script>
 <!-- 播放区域的引入 -->
-
+<script type="text/javascript" charset="utf-8">
+	$(document).ready(function(){
+		var email = $("#login_username");
+		var password = $("#login_password");
+		var checkPassword = $("check_passowrd");
+		var alertDanger = $("#alertDanger");
+		var reg = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/;
+		$("#submit").click(function(){
+			if(email.val()==null || email.val()==""){
+				alertDanger.html("对不起，您没有输入email邮箱");
+				email.focus();
+				return false;
+			}
+			
+			if(reg.test(email.val())){
+				alertDanger.html("对不起，您输入的不是邮箱地址");
+				email.focus();
+				return false;
+			}
+			
+			if(password.val() =="" || password.val() ==null){
+				alertDanger.html("对不起，您没有输入密码");
+				password.focus();
+				return false;
+			}
+			
+			if(password.val().length<7 || password.val().length>20){
+				alertDanger.html("对不起，您输入密码必须在7到20位之间");
+				password.focus();
+				return false;
+			}
+			
+			if(password.val() !=checkPassword.val()){
+				alertDanger.html("对不起，您两次输入的密码正确");
+				checkPassword.focus();
+				return false;
+			}
+		});
+	});
+</script>
 <style type="text/css">
 /*返回顶部 */
 .go {
@@ -210,7 +249,7 @@ html {
 				<div class="panel panel-default panel-page">
 					<form id="login-form" class="form-vertical" method="post"
 						action="/ITTao/register" novalidate="novalidate" data-widget-cid="widget-0">
-						<div class="alert alert-danger">帐号或密码不正确</div>
+						<div class="alert alert-danger" id="alertDanger">帐号或密码不正确</div>
 
 						<div class="form-group">
 							<label class="control-label" for="login_username">帐号</label>
@@ -234,7 +273,7 @@ html {
 						<div class="form-group">
 							<label class="control-label" for="login_password">确认密码</label>
 							<div class="controls">
-								<input class="form-control" id="login_password" type="password"
+								<input class="form-control" id="check_password" type="password"
 									name="cpassword"  placeholder="请再次输入密码" data-widget-cid="widget-2"
 									data-explain="" required>
 								<div class="help-block" style="display: none;"></div>
@@ -244,7 +283,7 @@ html {
 						<div class="form-group">
 							<div class="controls">
 								</span>
-								<input type="submit" class="btn btn-fat btn-primary btn-large" value="注册">
+								<input type="submit" class="btn btn-fat btn-primary btn-large" id="submit" value="注册">
 							</div>
 						</div>
 					</form>
