@@ -34,7 +34,6 @@
 						submit.click(function() {
 							var email = $("#username").val();
 							var password = $("#password").val();
-							alert(email+"passw"+password);
 							if (email == null || email == "") {
 								alertDanger.show();
 								alertDanger.html("对不起，您没有输入email邮箱");
