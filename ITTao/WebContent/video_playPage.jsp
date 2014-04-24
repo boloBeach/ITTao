@@ -9,9 +9,8 @@
 <% HttpSession httpSession =request.getSession();
 String id= request.getParameter("id");
    if(httpSession==null){
-	   response.sendRedirect("index.jsp");
+	   response.sendRedirect("login.jsp");
    }
-   
    String username=httpSession.getAttribute("username")==null?null:httpSession.getAttribute("username").toString();
    String password=httpSession.getAttribute("password")==null?null:httpSession.getAttribute("password").toString();
  if(
@@ -21,15 +20,11 @@ String id= request.getParameter("id");
 	 
 	 if(!(new VideoDao().isView(id,username,password)))
 	 {
-		 response.sendRedirect("index.jsp");
+		 response.sendRedirect("login.jsp");
 	 }
-	 
-	 
  }else{
-	  response.sendRedirect("index.jsp");
+	  response.sendRedirect("login.jsp");
  } 
-   
- 
 %>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
@@ -143,14 +138,14 @@ String id= request.getParameter("id");
 		<div id="nav">
 			<div id="allNav" class="allNav">
 				<span>所有分类</span>
-			</div><!-- 
+			</div>
 			<div class="search">
 				<form action="" method="post">
 					<input type="text"
 						style="width: 240px; height: 23px; float: left; border: none;" />
 					<input type="submit" class="btn searchButt" value="搜索" />
 				</form>
-			</div> -->
+			</div> 
 		</div>
 		<%--end nav --%>
 		<%--浮动菜单列表 --%>
@@ -162,18 +157,19 @@ String id= request.getParameter("id");
 			</ul>
 		</div>
 		<%--播放的位置与内容的标题 --%>
+		<% 
+				List<HashMap<String,Object>> list=new VideoDao().query(id);
+				%>
 		<div class="palyTitleF">
 			<div class="palyTitle">
-				<span> 视频的类型 </span>&nbsp;>&nbsp;<span>视频的名字</span>
+				<span> 视频的名称 </span>&nbsp;>&nbsp;<span><%out.print(list.get(0).get("vidoname")); %></span>
 			</div>
 		</div>
 		<%--视屏播放地方--%>
 		<div id="playFream" class="playFream">
 			<div id="palyBox">
 				<div class="playWindow" id="playWindow">
-				<% 
-				List<HashMap<String,Object>> list=new VideoDao().query(id);
-				%>
+				
 				  <embed id="videopalyer" src="<%out.print(list.get(0).get("videourl")); %>" allowfullscreen="true" flashvars="controlbar=over&image=./photo.png&file=./Breathless.mp4" width="660" height="530"/>
 				</div>
 				<%--end playWindow --%>

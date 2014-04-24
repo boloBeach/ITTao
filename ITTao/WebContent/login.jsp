@@ -177,14 +177,14 @@ html {
 			<div id="allNav" class="allNav">
 				<span>所有分类${content}</span>
 			</div>
-			<!-- 
+		 
 			<div class="search">
 				<form action="" method="post">
 					<input type="text"
 						style="width: 240px; height: 23px; float: left; border: none;" />
 					<input type="submit" class="btn searchButt" value="搜索" />
 				</form>
-			</div> -->
+			</div> 
 		</div>
 		<%--end nav --%>
 		<%--浮动菜单列表 --%>
@@ -218,7 +218,7 @@ html {
 							<label class="control-label" for="login_username">帐号</label>
 							<div class="controls">
 								<input class="form-control" id="login_username" type="text"
-									name="username" value="11" 
+									name="username" value="" 
 									data-widget-cid="widget-1" pattern="^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$" title="邮箱正确格式：xxx@xxx.xxx" placeholder="请输入Email地址" data-explain="请输入Email地址 / 用户昵称" required>
 								<div class="help-block">请输入Email地址 </div>
 							</div>

@@ -317,17 +317,17 @@ img {
 				<%--娱乐 列表 --%>
 				<div class="entertainmentContentF">
 				
-				<% List<HashMap<String,Object>> list=new VideoDao().QueryVideo("1",12); %>
+				<% List<HashMap<String,Object>> list=new VideoDao().QueryVideo("0",0,12); %>
 					<% 
 					int i=1;
 					for(HashMap<String,Object> hashMap:list){%>
 					<div class="everyPartF">
 						<div class="everyPartImg">
-							<a href="video_playPage.jsp?id=<% out.print(hashMap.get("id")); %>" target="_blank" title="<%out.print(hashMap.get("vidoname")); %>"><img
+							<a href="videoItem.jsp?id=<% out.print(hashMap.get("id")); %>" target="_blank" title="<%out.print(hashMap.get("vidoname")); %>"><img
 								src="<% out.print(hashMap.get("image")); %>" /></a>
 						</div>
 						<div class="everyPartFont">
-							<a href="video_playPage.jsp?id=<% out.print(hashMap.get("id")); %>" target="_blank" title="<%out.print(hashMap.get("vidoname")); %>"> <%out.print(hashMap.get("vidoname")); %> </a>
+							<a href="videoItem.jsp?id=<% out.print(hashMap.get("id")); %>" target="_blank" title="<%out.print(hashMap.get("vidoname")); %>"> <%out.print(hashMap.get("vidoname")); %> </a>
 						</div>
 						
 						<div class="everyPartFontPrice">
