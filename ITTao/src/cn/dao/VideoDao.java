@@ -4,7 +4,7 @@ import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.List;
 
-import cn.util.Md5;
+import cn.model.Md5;
 
 public class VideoDao {
 	
