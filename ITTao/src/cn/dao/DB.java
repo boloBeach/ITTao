@@ -1,5 +1,6 @@
 package cn.dao;
 
+import java.io.UnsupportedEncodingException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -132,6 +133,16 @@ public class DB {
 					e.printStackTrace();
 				}
 			}
+		
+		}
+	}
+	
+	public   static void main(String[] args){
+		try {
+			System.out.println(new String("123".getBytes("UTF-8"),"UTF-8"));
+		} catch (UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 	}
 }
