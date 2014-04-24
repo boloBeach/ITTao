@@ -28,36 +28,42 @@
 	$(document).ready(function(){
 		var email = $("#login_username");
 		var password = $("#login_password");
-		var checkPassword = $("check_passowrd");
+		var checkPassword = $("#check_password");
 		var alertDanger = $("#alertDanger");
-		var reg = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/;
+		alertDanger.hide();
 		$("#submit").click(function(){
 			if(email.val()==null || email.val()==""){
+				alertDanger.show();
 				alertDanger.html("对不起，您没有输入email邮箱");
 				email.focus();
 				return false;
 			}
 			
-			if(reg.test(email.val())){
+			var reg=/^[\w\-\.]+@[\w\-\.]+(\.\w+)+$/;
+			if (!reg.test(email.val())) {
+				alertDanger.show();
 				alertDanger.html("对不起，您输入的不是邮箱地址");
-				email.focus();
+				$("#username").focus();
 				return false;
 			}
 			
 			if(password.val() =="" || password.val() ==null){
+				alertDanger.show();
 				alertDanger.html("对不起，您没有输入密码");
 				password.focus();
 				return false;
 			}
 			
 			if(password.val().length<7 || password.val().length>20){
+				alertDanger.show();
 				alertDanger.html("对不起，您输入密码必须在7到20位之间");
 				password.focus();
 				return false;
 			}
 			
 			if(password.val() !=checkPassword.val()){
-				alertDanger.html("对不起，您两次输入的密码正确");
+				alertDanger.show();
+				alertDanger.html("对不起，您两次输入的密码不正确");
 				checkPassword.focus();
 				return false;
 			}

@@ -25,32 +25,47 @@
 <script language="javascript" type="text/javascript"
 	src="js/video_playPage.js"></script>
 <script type="text/javascript" charset="utf-8">
-	$(document).ready(function(){
-		var email = $("#login_username").val();
-		var passwrod = $("#login_password").val();
-		var submit = $("#submit");
-		var alertDanger = $("#alert alert-danger");
-		var reg = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/;
-		submit.click(function(){
-			if(email==null || email==""){
-				alertDanger.html("对不起，您没有输入email邮箱");
-				$("#login_username").focus();
-				return false;
-			}
-			
-			if(password =="" || password ==null){
-				alertDanger.html("对不起，您没有输入密码");
-				$("#login_password").focus();
-				return false;
-			}
-			if(reg.test(email)){
-				alertDanger.html("对不起，您输入的不是邮箱地址");
-				$("#login_username").focus();
-				return false;
-			}
-		});
-		
-	});
+	$(document)
+			.ready(
+					function() {
+						var alertDanger = $("#alertDanger");
+						alertDanger.hide();
+						var submit = $("#submit");
+						submit.click(function() {
+							var email = $("#username").val();
+							var password = $("#password").val();
+							alert(email+"passw"+password);
+							if (email == null || email == "") {
+								alertDanger.show();
+								alertDanger.html("对不起，您没有输入email邮箱");
+								$("#username").focus();
+								return false;
+							}
+							var reg=/^[\w\-\.]+@[\w\-\.]+(\.\w+)+$/;
+							if (!reg.test(email)) {
+								alertDanger.show();
+								alertDanger.html("对不起，您输入的不是邮箱地址");
+								$("#username").focus();
+								return false;
+							}
+							if (password == "" || password == null) {
+								alertDanger.show();
+								alertDanger.html("对不起，您没有输入密码");
+								$("#password").focus();
+								return false;
+							}
+							
+							if(password.length<7 || password.length>20){
+								alertDanger.show();
+								alertDanger.html("对不起，您输入的密码长度必须在7到20位之间");
+								$("#password").focus();
+								return false;
+							}
+							
+							
+						});
+
+					});
 </script>
 <!-- 播放区域的引入 -->
 
@@ -64,8 +79,8 @@
 	position: fixed;
 	_position: absolute;
 	_top: expression(eval(document.documentElement.scrollTop +              
-		              document.documentElement.clientHeight-this.offsetHeight-
-		(  
+		              
+		document.documentElement.clientHeight-this.offsetHeight- (  
 		 
 		   
 		      
@@ -205,14 +220,14 @@ html {
 			<div id="allNav" class="allNav">
 				<span>所有分类${content}</span>
 			</div>
-		 
+
 			<div class="search">
 				<form action="" method="post">
 					<input type="text"
 						style="width: 240px; height: 23px; float: left; border: none;" />
 					<input type="submit" class="btn searchButt" value="搜索" />
 				</form>
-			</div> 
+			</div>
 		</div>
 		<%--end nav --%>
 		<%--浮动菜单列表 --%>
@@ -238,24 +253,23 @@ html {
 			<div class="palyBoxList">
 				<div class="panel panel-default panel-page">
 					<form id="login-form" class="form-vertical" method="post"
-						action="/ITTao/login" novalidate="novalidate" data-widget-cid="widget-0">
+						action="/ITTao/login" novalidate="novalidate"
+						data-widget-cid="widget-0">
 
-						<div class="alert alert-danger" id="alert alert-danger"></div>
+						<div class="alert alert-danger" id="alertDanger"></div>
 
 						<div class="form-group">
-							<label class="control-label" for="login_username">帐号</label>
+							<label class="control-label">帐号</label>
 							<div class="controls">
-								<input class="form-control" id="login_username" type="text"
-									name="username" value="" 
-									data-widget-cid="widget-1" pattern="^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$" title="邮箱正确格式：xxx@xxx.xxx" placeholder="请输入Email地址" data-explain="请输入Email地址 / 用户昵称" required>
-								<div class="help-block">请输入Email地址 </div>
+								<input class="form-control" id="username" type="text"
+									name="username" placeholder="请输入Email地址">
 							</div>
 						</div>
 						<div class="form-group">
-							<label class="control-label" for="login_password">密码</label>
+							<label class="control-label">密码</label>
 							<div class="controls">
-								<input class="form-control" id="login_password" type="password"
-									name="password"  placeholder="请输入密码" data-widget-cid="widget-2"
+								<input class="form-control" id="password" type="password"
+									name="password" placeholder="请输入密码" data-widget-cid="widget-2"
 									data-explain="" required>
 								<div class="help-block" style="display: none;"></div>
 							</div>
@@ -267,15 +281,15 @@ html {
 										type="checkbox" name="_remember_me" checked="checked">
 										记住密码
 								</label>
-								</span>
-								<input type="submit" class="btn btn-fat btn-primary btn-large" id="submit" value="登录">
+								</span> <input type="submit" class="btn btn-fat btn-primary btn-large"
+									id="submit" value="登录">
 							</div>
 						</div>
 					</form>
 
 					<div class="ptl">
-						<!-- <a href="#">找回密码</a> <span class="text-muted mhs">|</span> --> <span
-							class="text-muted">还没有注册帐号？</span> <a href="regist.jsp">立即注册</a>
+						<!-- <a href="#">找回密码</a> <span class="text-muted mhs">|</span> -->
+						<span class="text-muted">还没有注册帐号？</span> <a href="regist.jsp">立即注册</a>
 					</div>
 				</div>
 			</div>
