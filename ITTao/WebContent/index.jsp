@@ -253,12 +253,12 @@ img {
 							src="images/front_img/video_focusImg/01.jpg" /></a></li>
 					<li><a href="#" target="_blank"><img
 							src="images/front_img/video_focusImg/02.jpg" /></a></li>
-					<li><a href="#" target="_blank"><img
+				<!-- 	<li><a href="#" target="_blank"><img
 							src="images/front_img/video_focusImg/03.jpg" /></a></li>
 					<li><a href="#" target="_blank"><img
 							src="images/front_img/video_focusImg/04.jpg" /></a></li>
 					<li><a href="#" target="_blank"><img
-							src="images/front_img/video_focusImg/05.jpg" /></a></li>
+							src="images/front_img/video_focusImg/05.jpg" /></a></li> -->
 				</ul>
 			</div>
 		</div>
@@ -316,7 +316,6 @@ img {
 				<!-- end entertainmentInfoTop -->
 				<%--娱乐 列表 --%>
 				<div class="entertainmentContentF">
-				
 				<% List<HashMap<String,Object>> list=new VideoDao().QueryVideo("0",0,12); %>
 					<% 
 					int i=1;
@@ -354,12 +353,20 @@ img {
 
 				<div class="rankinListListF">
 					<%--列表循环  14条记录--%>
-					<div class="rankinListList">
+					<% for(i=0;i<list.size();i++){
+						%>
+						<div class="rankinListList">
 						<span class="rankinListListSL">12</span> <span
-							class="rankinListListSR"> <a href="videoItem.jsp" target="_blank" title="视频的标题">
-								视频的标题 </a></span>
-								<span class="price">20.00元</span>
+							class="rankinListListSR"> <a href="videoItem.jsp?id=<% out.print(list.get(i).get("id")); %>" target="_blank" title="<% out.print(list.get(i).get("vidoname")); %>">
+								<% out.print(list.get(i).get("vidoname")); %></a></span>
+								<span class="price"><% out.print(list.get(i).get("money")); %>元</span>
+								
 					</div>
+						
+						<%
+					} %>
+					
+				
 
 				</div>
 				<%--列表外部框结束 end rankinListListF --%>

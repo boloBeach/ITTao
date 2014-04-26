@@ -39,6 +39,7 @@ public class RegisterAction extends HttpServlet {
 		 String password=req.getParameter("password");
 		 String cpassword=req.getParameter("cpassword");
 		 String reurl="/ITTao/regist.jsp";
+	     boolean bool=false;
 		 if(username!=null&&username.length()>0
 				 &&password!=null&&password.length()>0
 				 &&cpassword!=null&&cpassword.length()>0){
@@ -47,12 +48,12 @@ public class RegisterAction extends HttpServlet {
 				 u.setEmail(username);
 				 u.setPassword(password);
 				if(null!= new UserDao().add(u)){
+					bool=true;
 					reurl="/ITTao/login.jsp";
 				}
 			 }
 		 }
-		 
-		 resp.sendRedirect(reurl);
+		 resp.sendRedirect(reurl+(bool?"":"?type=fail"));
 	}
 	
 }

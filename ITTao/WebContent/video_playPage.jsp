@@ -52,6 +52,14 @@ String id= request.getParameter("id");
 <!-- 播放区域的引入 -->
 <script type="text/javascript"
 	src="js/video_playPagePlay.js"></script>
+	
+	
+<script type="text/javascript">
+   function fun_video(url){
+	 $("#playWindow").html('<embed id="videopalyer" src="'+url+'" allowfullscreen="true" flashvars="controlbar=over&image=./photo.png&file=./Breathless.mp4" width="660" height="530"/>');
+	// $(').appendTo("#playWindow");
+   }
+</script>
 
 <style type="text/css">
 /*返回顶部 */
@@ -177,75 +185,25 @@ String id= request.getParameter("id");
 					<div class="playRightNavUpTitle">相关视频</div>
 					<div id="playRightNavListF" class="playRightNavListF">
 						<%--循环的列表  注意只有  4 条 --%>
-						<div id="playRightNavListEveryF" class="playRightNavListEveryF">
-							<div class="playRightNavListEveryImg">
-								<a href="#"><img alt="" src="daibing.jpg" /></a>
-							</div>
-							<div class="playRightNavListEveryRF">
-								<div class="playRightNavListEveryRT">
-									★<a href="receptionVedioNews" title="视频的title">视频的title</a>
-								</div>
-								<div class="playRightNavListEveryRTimes">播放:xx次</div>
-							</div>
-						</div>
-						<%--end playRightNavListEveryF --%>
-						<%--循环的列表  注意只有  4 条 --%>
-						<div class="playRightNavListEveryF">
-							<div class="playRightNavListEveryImg">
-								<a href="#"><img alt=""
-									src="daibing.jpg" /></a>
-							</div>
-							<div class="playRightNavListEveryRF">
-								<div class="playRightNavListEveryRT">
-									★<a href="receptionVedioNews" title="视频的title">视频的title</a>
-								</div>
-								<div class="playRightNavListEveryRTimes">播放:xx次</div>
-							</div>
-						</div>
-						<%--end playRightNavListEveryF --%>
-						<%--循环的列表  注意只有  4 条 --%>
-						<div class="playRightNavListEveryF">
-							<div class="playRightNavListEveryImg">
-								<a href="#"><img alt=""
-									src="photo.png" /></a>
-							</div>
-							<div class="playRightNavListEveryRF">
-								<div class="playRightNavListEveryRT">
-									★<a href="receptionVedioNews" title="视频的title">视频的title</a>
-								</div>
-								<div class="playRightNavListEveryRTimes">播放:xx次</div>
-							</div>
-						</div>
-						<%--end playRightNavListEveryF --%>
-						<%--循环的列表  注意只有  4 条 --%>
-						<div class="playRightNavListEveryF">
-							<div class="playRightNavListEveryImg">
-								<a href="#"><img alt=""
-									src="photo.png" /></a>
-							</div>
-							<div class="playRightNavListEveryRF">
-								<div class="playRightNavListEveryRT">
-									★<a href="receptionVedioNews" title="视频的title">视频的title</a>
-								</div>
-								<div class="playRightNavListEveryRTimes">播放:xx次</div>
-							</div>
-						</div>
-						<%--end playRightNavListEveryF --%>
 						
-						<%--循环的列表  注意只有  4 条 --%>
-						<div class="playRightNavListEveryF">
+						<% List<HashMap<String,Object>> vilist= new VideoDao().QueryVideo(list.get(0).get("parentid").toString());
+						  for(int i=0;i<vilist.size();i++){
+							  
+							  %>
+							  <div id="playRightNavListEveryF" class="playRightNavListEveryF">
 							<div class="playRightNavListEveryImg">
-								<a href="#"><img alt=""
-									src="#" /></a>
+								<a href="javascript:fun_video('<%out.print(vilist.get(i).get("videourl")); %>');"><img alt="" src="<%out.print(vilist.get(i).get("image")); %>" /></a>
 							</div>
 							<div class="playRightNavListEveryRF">
 								<div class="playRightNavListEveryRT">
-									★<a href="receptionVedioNews" title="视频的title">视频的title</a>
+									★<a href="javascript:fun_video('<%out.print(vilist.get(i).get("videourl")); %>');" title="<%out.print(vilist.get(i).get("vidoname")); %>"><%out.print(vilist.get(i).get("vidoname")); %></a>
 								</div>
-								<div class="playRightNavListEveryRTimes">播放:xx次</div>
+								<div class="playRightNavListEveryRTimes">播放:<%out.print(vilist.get(i).get("clickcount")); %>次</div>
 							</div>
-						</div>
-						<%--end playRightNavListEveryF --%>
+						</div>  
+							  <%
+						  }
+						%>
 
 					</div>
 					<%--end playRightNavListF --%>

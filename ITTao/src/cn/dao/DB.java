@@ -15,9 +15,9 @@ import java.util.List;
 public class DB {
 
 	private static final String DB_DRIVER = "com.mysql.jdbc.Driver";
-	private static final String DB_URL = "jdbc:mysql://192.168.1.230:3306/videodb?useUnicode=true&characterEncoding=UTF-8";
+	private static final String DB_URL = "jdbc:mysql://42.121.133.101:3306/videodb?useUnicode=true&characterEncoding=UTF-8";
 	private static final String DB_USER = "root";
-	private static final String DB_PASSWORD = "root";
+	private static final String DB_PASSWORD = "qwer";
 
 	private static Connection getConn() throws ClassNotFoundException,
 			SQLException {

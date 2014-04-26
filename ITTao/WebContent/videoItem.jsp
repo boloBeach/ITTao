@@ -149,11 +149,7 @@
 		<%--展示视频的--%>
 		<div id="playFream" class="playFreamList">
 			<div class="palyBoxList">
-			
-			
-			   
 			<% List<HashMap<String,Object>> item= new VideoDao().QueryById(id) ;
-			
 			%>
 				<div class="video-title">
 					<div class="video-title-img">
@@ -162,7 +158,7 @@
 					<div class="video-title-discri">
 						<div class="video-title-discri-title"><%out.print(item.get(0).get("vidoname")); %></div>
 
-						<div class="video-title-discri-discri"><%out.print(item.get(0).get("des")); %></div>
+				<%-- 		<div class="video-title-discri-discri"><%out.print(item.get(0).get("des")); %></div> --%>
 
 						<div class="video-title-price">
 							价格:<span><%out.print(item.get(0).get("money")); %>元</span>
@@ -182,7 +178,7 @@
 						<button class="btn btn-info">课程介绍</button>
 					</div>
 					<div class="video-discri-info">
-						1.hadoop简介<br> 2.hive<br> 3.pig
+						<%out.print(item.get(0).get("des")); %>
 					</div>
 				</div>
 				<div class="video-item">

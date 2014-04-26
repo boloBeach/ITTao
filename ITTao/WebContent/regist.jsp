@@ -256,6 +256,7 @@ html {
 					<form id="login-form" class="form-vertical" method="post"
 						action="/ITTao/register" novalidate="novalidate" data-widget-cid="widget-0">
 						<div class="alert alert-danger" id="alertDanger">帐号或密码不正确</div>
+						<div class="alert alert-danger" id="alertDanger1" style="display:none;"></div>
 
 						<div class="form-group">
 							<label class="control-label" for="login_username">帐号</label>
@@ -303,5 +304,18 @@ html {
 		</div>
 		<!-- 底部 -->
 		<a name="gobottom">&nbsp;</a>
+	
 </body>
+<script  type="text/javascript">
+		  <% String str=request.getParameter("type");
+		     if(str!=null&&str.equals("fail")){
+		    	 %>
+		    	 alertD=document.getElementById("alertDanger1");
+		    	 alertD.innerHTML="账号已被注册过";
+                 alertD.style.display="";
+		    	 <%
+		     }
+		  %>
+		</script>
 </html>
+	
