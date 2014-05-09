@@ -19,7 +19,7 @@ time, mark, audio, video {
     padding: 0;
     border: 0;
     font-size: 100%;
-    font: inherit;
+    /*font: inherit;*/
     vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -48,37 +48,32 @@ table {
 
 /**
     以下为自定义的默认样式
-    所有宽度都用em为单位 px/10的值就是em值
 */
 body {
-    font-size: 62.5%;
     font-family: "Microsoft Yahei","Helvetica Neue","Luxi Sans","DejaVu Sans",Tahoma,"Hiragino Sans GB",STHeiti !important;
     color:#666666;
-    line-height: 1.5em;
     background: url("../images/background.png") repeat center scroll;
-}
-p, h1, h2, a {
-    font-size: 1.3em;
+    font-size: 13px;
 }
 blockquote {
     background:#f9f9f9;
     border-left:10px solid #ccc;
-    margin:1.5em 1em;
-    padding:.5em 1em;
+    margin:15px 1px;
+    padding:5px 1px;
     quotes:"\201C""\201D""\2018""\2019";
 }
 blockquote:before {
     color:#ccc;
     content:open-quote;
-    font-size:4em;
-    line-height:.1em;
-    margin-right:.25em;
-    vertical-align:-.4em;
+    font-size:40px;
+    line-height:1px;
+    margin-right:25px;
+    vertical-align:-4px;
 }
 blockquote p {
     display:inline;
-    line-height:1.5em;
-    font-size: 1.4em;
+    line-height:15px;
+    font-size: 14px;
 }
 a {
     color:#818181;
@@ -101,23 +96,24 @@ a:hover {
 }
 
 input[type='text'], input[type='password'] {
-    width: 15em;
-    height: 1.5em;
+    width: 150px;
+    height: 18px;
     border: 1px solid #AAAAAA;
-    border-radius: 0.3em;
+    border-radius: 3px;
     box-shadow: 0 0 0 2px rgba(46, 46, 46, 0.1),
                 inset 0 0 3px rgba(46, 46, 46, 0.1);
-    padding-left: 0.5em;
+    padding-left: 5px;
     color: #AAAAAA;
 }
 input[type='text']:hover, input[type='password']:hover {
-    box-shadow: 0 0 0 0.2em rgba(46, 46, 46, 0.15),
+    box-shadow: 0 0 0 2px rgba(46, 46, 46, 0.15),
                 inset 0 0 3px rgba(46, 46, 46, 0.2);
     border: 1px solid #868686;
-}F4F4F4
- input[type='text'].gray, input[type='password'].gray {
+}
+input[type='text'].gray, input[type='password'].gray {
     background-color: #F4F4F4;
- }
+}
+
 
 
 

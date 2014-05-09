@@ -1,0 +1,11 @@
+.container {
+    width: 100%;
+}
+.slide-content {
+    display: none;
+}
+.news-content {
+    width: calc(100% - 20px);
+    float: left;
+    margin: 10px -10px 0 10px;
+}
