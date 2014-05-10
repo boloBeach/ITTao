@@ -94,7 +94,13 @@ a:hover {
     background: #C3E99E;
     color: #fff;
 }
-
+em {
+    font-style: normal;
+}
+img {
+    border: 0;
+    max-width: 100%;
+}
 input[type='text'], input[type='password'] {
     width: 150px;
     height: 18px;

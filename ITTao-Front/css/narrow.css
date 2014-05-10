@@ -10,3 +10,12 @@
     float: left;
     margin: 10px -10px 0 10px;
 }
+.item-content {
+    width: calc(100% - 20px);
+}
+.video {
+    width: 100%;
+}
+.ranking {
+    display: none;
+}
