@@ -119,6 +119,23 @@ input[type='text']:hover, input[type='password']:hover {
 input[type='text'].gray, input[type='password'].gray {
     background-color: #F4F4F4;
 }
+input[type='submit'] {
+    width: 240px;
+    height: 35px;
+    border: 0;
+    border-radius: 6px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 35px;
+    text-align: center;
+    background: rgb(51,159,146);
+    box-shadow:  2px 2px 5px rgba(26, 26, 26, 0.6);
+}
+input[type='submit']:hover {
+    box-shadow:  2px 2px 5px rgba(26, 26, 26, 0.6),
+                 inset 0 0 5px rgba(216, 216, 216, 0.8);
+}
 
 
 
