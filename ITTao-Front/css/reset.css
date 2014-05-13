@@ -130,6 +130,44 @@ input[type='text'].gray, input[type='password'].gray {
 
 
 
+/****常用库类*****/
+.clearB {
+    clear: both;
+}
+.clearL {
+    clear: left;
+}
+.clearR {
+    clear: right;
+}
+.click-content {
+    padding: 10px 0 10px 0;
+    width: 100%;
+    text-align: center;
+}
+.click-content button {
+    width: 240px;
+    height: 40px;
+    margin-top: 20px;
+    margin-left: 30px;
+    background: rgb(51,159,146);
+    border-radius: 6px;
+    border:none;
+    color: rgb(255,255,255);
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
 
 
 

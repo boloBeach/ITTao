@@ -1,40 +1,3 @@
-/****常用库类*****/
-.clearB {
-    clear: both;
-}
-.clearL {
-    clear: left;
-}
-.clearR {
-    clear: right;
-}
-.click-content {
-    padding: 10px 0 10px 0;
-    width: 100%;
-    text-align: center;
-}
-.click-content button {
-    width: 240px;
-    height: 40px;
-    margin-top: 20px;
-    margin-left: 30px;
-    background: rgb(51,159,146);
-    border-radius: 6px;
-    border:none;
-    color: rgb(255,255,255);
-    font-size: 14px;
-    font-weight: bold;
-    line-height: 40px;
-    text-align: center;
-    cursor: pointer;
-}
-
-
-
-
-
-
-
 /*** 总体布局类***/
 html, body {
     width: 100%;
@@ -322,7 +285,47 @@ html, body {
 
 
 
+/*****narrow部分*****/
+@media screen and (min-width: 600px)  and (max-width: 900px){
+    .container {
+        width: 100%;
+    }
+    .slide-content {
+        width: calc(100% - 20px);
+        margin: 10px -10px 0 10px;
+    }
+    .news-content {
+        width: calc(100% - 20px);
+        float: left;
+        margin: 10px -10px 0 10px;
+    }
+    .item-content {
+        width: calc(100% - 20px);
+    }
+    .video {
+        width: 100%;
+    }
+    .ranking {
+        display: none;
+    }
+}
 
+
+
+/*******mobile部分****/
+@media  screen and (max-width: 600px){
+    .container {
+        width: 100%;
+    }
+    .slide-content {
+        display: none;
+    }
+    .news-content {
+        width: calc(100% - 20px);
+        float: left;
+        margin: 10px -10px 0 10px;
+    }
+}
 
 
 
