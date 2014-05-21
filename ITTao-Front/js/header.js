@@ -1,5 +1,5 @@
 define(function(require, exports, module) {
-//    var $ = require('jquery');
+    var $ = jQuery;
     var easing = require('easing');
 
     jQuery.easing.def = "easeOutBounce";

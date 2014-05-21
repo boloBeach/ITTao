@@ -119,11 +119,12 @@ input[type='text']:hover, input[type='password']:hover {
 input[type='text'].gray, input[type='password'].gray {
     background-color: #F4F4F4;
 }
-input[type='submit'] {
+input[type='submit'], button, input[type='button'] {
     width: 240px;
     height: 35px;
     border: 0;
     border-radius: 6px;
+    position: relative;
     color: #ffffff;
     font-size: 14px;
     font-weight: bold;
@@ -132,7 +133,7 @@ input[type='submit'] {
     background: rgb(51,159,146);
     box-shadow:  2px 2px 5px rgba(26, 26, 26, 0.6);
 }
-input[type='submit']:hover {
+input[type='submit']:hover, button:hover, input[type='button']:hover {
     box-shadow:  2px 2px 5px rgba(26, 26, 26, 0.6),
                  inset 0 0 5px rgba(216, 216, 216, 0.8);
 }
@@ -176,6 +177,96 @@ input[type='submit']:hover {
     line-height: 40px;
     text-align: center;
     cursor: pointer;
+}
+.shock {
+    -moz-animation-name: shock;
+    -moz-animation-duration: 2s;
+    -moz-animation-timing-function: ease;
+    -moz-animation-iteration-count: 1;
+
+    -webkit-animation-name: shock;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-timing-function: ease;
+    -webkit-animation-iteration-count: 1;
+
+    -o-animation-name: shock;
+    -o-animation-duration: 2s;
+    -o-animation-timing-function: ease;
+    -o-animation-iteration-count: 1;
+
+    animation-name: shock;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+}
+@-moz-keyframes shock{
+    0% {
+        left: 30px;
+    }
+    10% {
+        left: -30px;
+    }
+    30% {
+        left: 15px;
+    }
+    50% {
+        left: -10px;
+    }
+    70% {
+        left: 5px;
+    }
+    90% {
+        left: -3px;
+    }
+    100% {
+        left: 0;
+    }
+}
+@keyframes shock {
+    0% {
+        left: 30px;
+    }
+    10% {
+        left: -30px;
+    }
+    30% {
+        left: 15px;
+    }
+    50% {
+        left: -10px;
+    }
+    70% {
+        left: 5px;
+    }
+    90% {
+        left: -3px;
+    }
+    100% {
+        left: 0;
+    }
+}
+@-webkit-keyframes shock {
+    0% {
+        left: 30px;
+    }
+    10% {
+        left: -30px;
+    }
+    30% {
+        left: 15px;
+    }
+    50% {
+        left: -10px;
+    }
+    70% {
+        left: 5px;
+    }
+    90% {
+        left: -3px;
+    }
+    100% {
+        left: 0;
+    }
 }
 
 
