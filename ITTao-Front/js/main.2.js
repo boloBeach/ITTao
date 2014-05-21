@@ -3,7 +3,7 @@ define(function(require, exports, module) {
     var $ = jQuery;
     var easing = require('easing');
 
-    jQuery.easing.def = "easeOutBounce";
+//    jQuery.easing.def = "easeOutBounce";
 
     $(function() {
         var slide = $('.slide'),
@@ -53,6 +53,13 @@ define(function(require, exports, module) {
                     });
                 }
             }
+        });
+
+
+
+        $('.mobile-header-list').click(function() {
+            var nav = $('.header nav');
+            nav.slideToggle('fast');
         });
     });
 

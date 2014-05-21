@@ -89,3 +89,40 @@
     padding-left: 50px;
     margin-bottom: 20px;
 }
+
+
+
+
+
+/* 屏幕适配*/
+@media screen and (min-width: 600px)  and (max-width: 900px) {
+    .container {
+        margin-top: -80px;
+        top: 30%;
+        -webkit-animation: all 1s;-o-animation: all 1s;-moz-animation: all 1s;animation: all 1s;
+    }
+}
+
+@media  screen and (max-width: 600px) {
+    .container {
+        margin-top: 10px;
+        top: 0;
+        -webkit-animation: all 1s;-o-animation: all 1s;-moz-animation: all 1s;animation: all 1s;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
