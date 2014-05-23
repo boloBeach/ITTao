@@ -289,18 +289,24 @@ html, body {
 
 
 /*****narrow部分*****/
-@media screen and (min-width: 600px)  and (max-width: 900px){
+@media screen and (min-width: 400px)  and (max-width: 899px){
     .container {
         width: 100%;
     }
     .slide-content {
-        width: calc(100% - 20px);
+        width: calc(100% - 25px);
         margin: 10px -10px 0 10px;
     }
     .news-content {
         width: calc(100% - 20px);
         float: left;
-        margin: 10px -10px 0 10px;
+        margin: 20px -10px 0 10px;
+    }
+    .news-list {
+        width: 90%;
+    }
+    .news-list li {
+        width: calc(50% - 20px);
     }
     .item-content {
         width: calc(100% - 20px);
@@ -311,14 +317,18 @@ html, body {
     .ranking {
         display: none;
     }
+    .foot-content {
+        width: 100%;
+    }
 }
 
 
 
 /*******mobile部分****/
-@media  screen and (max-width: 600px){
+@media  screen and (max-width: 399px){
     .header section{
         width: 100%;
+        position: relative;
     }
     .header .tool {
         display: none;
@@ -369,6 +379,24 @@ html, body {
         width: calc(100% - 20px);
         float: left;
         margin: 10px -10px 0 10px;
+    }
+    .news-list li{
+        width: 100%;
+    }
+    .video {
+        width: calc(100% - 10px);
+        float: none;
+    }
+    .ranking {
+        width: calc(100% - 10px);
+        float: none;
+        margin-top: 10px;
+    }
+    .video-detail {
+        margin-left: calc(50% - 95px);
+    }
+    .foot-content {
+        width: 100%;
     }
 }
 

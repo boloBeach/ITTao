@@ -167,7 +167,6 @@ input[type='submit']:hover, button:hover, input[type='button']:hover {
     width: 240px;
     height: 40px;
     margin-top: 20px;
-    margin-left: 30px;
     background: rgb(51,159,146);
     border-radius: 6px;
     border:none;

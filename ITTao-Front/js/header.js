@@ -2,7 +2,7 @@ define(function(require, exports, module) {
     var $ = jQuery;
     var easing = require('easing');
 
-    jQuery.easing.def = "easeOutBounce";
+    jQuery.easing.def = "easeOutExpo";
 
     $(function() {
         var search = $('.search');
