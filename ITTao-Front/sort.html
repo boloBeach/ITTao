@@ -25,8 +25,8 @@
             </nav>
             <div class="tool">
                 <ul>
-                    <li><a href="">登陆</a></li>
-                    <li><a href="">注册</a></li>
+                    <li><a href="login.html">登陆</a></li>
+                    <li><a href="register.html">注册</a></li>
                 </ul>
             </div>
             <span class="search">
@@ -40,8 +40,8 @@
 
         <div class="content">
             <div class="item-content">
-                <div>视频类型 >> 视频名字</div>
-                <div>
+                <div class="item-nave">视频类型 >> 视频名字</div>
+                <div class="item-info">
                     <div>
                         <img src="images/big-data.jpg">
                     </div>
@@ -51,28 +51,109 @@
                         <li>学员数：<i>0</i></li>
                         <li><input type="button" value="购买课程"></li>
                     </ul>
+                    <div class="clearB"></div>
                 </div>
-                <div>
-                    <div>
+                <div class="item-intro">
+                    <div class="item-list-title">
                         <span>课程介绍</span>
                     </div>
                     <ul>
-                        <li>第一周</li>
-                        <li>第二周</li>
-                        <li>第三周</li>
-                        <li>第四周</li>
-                        <li>第五周</li>
-                        <li>第六周</li>
-                        <li>第七周</li>
+                        <li>第一周 SAS体系介绍：</li>
+                        <li>第二周 SAS体系介绍：</li>
+                        <li>第三周 SAS体系介绍：</li>
+                        <li>第四周 SAS体系介绍：</li>
+                        <li>第五周 SAS体系介绍：</li>
+                        <li>第六周 SAS体系介绍：</li>
+                        <li>第七周 SAS体系介绍：</li>
                     </ul>
                 </div>
-                <div>
-                    <div>
+                <div class="item-list">
+                    <div  class="item-list-title">
                         <span>课程列表</span>
                     </div>
                     <ul>
-                        <li></li>
+                        <li class="item-list-li">
+                            <div class="free">
+                                <i></i>
+                                <span>12:22</span>
+                            </div>
+                            <ul>
+                                <li>课时1：</li>
+                                <li>SAS体系介绍：</li>
+                            </ul>
+                        </li>
+                        <li class="item-list-li">
+                            <div>
+                                <i></i>
+                                <span>12:22</span>
+                            </div>
+                            <ul>
+                                <li>课时2：</li>
+                                <li>SAS体系介绍：</li>
+                            </ul>
+                        </li>
+                        <li class="item-list-li">
+                            <div>
+                                <i></i>
+                                <span>12:22</span>
+                            </div>
+                            <ul>
+                                <li>课时3：</li>
+                                <li>SAS体系介绍：</li>
+                            </ul>
+                        </li>
+                        <li class="item-list-li">
+                            <div>
+                                <i></i>
+                                <span>12:22</span>
+                            </div>
+                            <ul>
+                                <li>课时4：</li>
+                                <li>SAS体系介绍：</li>
+                            </ul>
+                        </li>
+                        <li class="item-list-li">
+                            <div>
+                                <i></i>
+                                <span>12:22</span>
+                            </div>
+                            <ul>
+                                <li>课时5：</li>
+                                <li>SAS体系介绍：</li>
+                            </ul>
+                        </li>
+                        <li class="item-list-li">
+                            <div>
+                                <i></i>
+                                <span>12:22</span>
+                            </div>
+                            <ul>
+                                <li>课时6：</li>
+                                <li>SAS体系介绍：</li>
+                            </ul>
+                        </li>
+                        <li class="item-list-li">
+                            <div>
+                                <i></i>
+                                <span>12:22</span>
+                            </div>
+                            <ul>
+                                <li>课时7：</li>
+                                <li>SAS体系介绍：</li>
+                            </ul>
+                        </li>
+                        <li class="item-list-li">
+                            <div>
+                                <i></i>
+                                <span>12:22</span>
+                            </div>
+                            <ul>
+                                <li>课时8：</li>
+                                <li>SAS体系介绍：</li>
+                            </ul>
+                        </li>
                     </ul>
+                    <div class="clearB"></div>
                 </div>
             </div>
         </div>
@@ -82,6 +163,19 @@
         <div class="foot-content">
             <p>&copy;ITTao</p>
         </div>
+    </div>
+
+    <div id="video">
+        <embed id="videopalyer"
+               src="./media/Breathless.mp4"
+               allowfullscreen="true"
+               flashvars="controlbar=over&image=./photo.png&file=./media/Breathless.mp4"
+               width="800"
+               height="530">
+        </embed>
+        <span id="videoclose" title="关闭">
+            <i class="glyphicon glyphicon-remove-circle"></i>
+        </span>
     </div>
 
     <script type="text/javascript" src="./js/lib/seajs/sea.js"></script>
@@ -95,6 +189,7 @@
             charset: 'utf-8'
         });
         seajs.use('./js/header.js');
+        seajs.use('./js/sort.js');
     </script>
 </body>
 </html>

@@ -1,1 +1,121 @@
 /*****sort页面*****/
+.item-nave {
+    padding: 10px 0;
+}
+.item-info {
+    height: auto;
+    min-height: 200px;
+    border: 1px solid #E2E2E2;
+}
+.item-info div {
+    float: left;
+}
+.item-info ul {
+    display: block;
+    float: left;
+}
+.item-info ul li {
+    line-height: 35px;
+    padding-left: 20px;
+}
+.item-intro {
+    border: 1px solid #E2E2E2;
+    margin: 10px 0;
+}
+.item-intro ul {
+    margin: 5px 0 10px 0;
+}
+.item-intro ul li {
+    line-height: 18px;
+    margin-left: 20px;
+}
+.item-list-title {
+    padding: 5px 0 10px 0;
+    margin: 0 0 0 20px;
+    border-bottom: 1px solid #E6E6E6;
+}
+.item-list-title span {
+    border-bottom: 3px solid #329C8F;
+    padding-bottom: 5px;
+}
+.item-list {
+    border: 1px solid #E2E2E2;
+    margin: 10px 0;
+    height: auto;
+    min-height: 100px;
+}
+.item-list>ul {
+    margin: 10px 20px;
+}
+.item-list-li {
+    width: 200px;
+    float: left;
+    margin: 0 20px 20px 0;
+    cursor: pointer;
+}
+.item-list-li div {
+    width: 70px;
+    height: 55px;
+    background-color: #329C8F;
+    /*opacity: 0.6;*/
+    float: left;
+    position: relative;
+    border-radius: 3px;
+}
+.item-list-li div.free {
+    background: #329C8F url("../images/course-item-free.png") no-repeat left top scroll;
+}
+.item-list-li div i {
+    position: absolute;
+    left: 16px;
+    top: 5px;
+    width: 36px;
+    height: 36px;
+    display: block;
+    background: url("../images/course-item-types-white.png") no-repeat 0 0 scroll;
+}
+.item-list-li div span {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+    padding: 2px 0;
+}
+.item-list-li ul {
+    display: block;
+    float: left;
+    margin-left: 5px;
+}
+.item-list-li ul li {
+    line-height: 18px;
+}
+#video {
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    opacity: 0.6;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+    z-index: 1000;
+}
+#videopalyer {
+    position: absolute;
+    left: 50%;
+    margin-left: -400px;
+    top: 50%;
+    margin-top: -265px;
+}
+#videoclose {
+    position: absolute;
+    display: inline-block;
+    left: 50%;
+    top: 50%;
+    margin-left: 405px;
+    margin-top: -265px;
+    cursor: pointer;
+}
+#videoclose i {
+    font-size: 24px;
+}
